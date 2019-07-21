@@ -7,10 +7,29 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
-    <lastBuildDate>Fri, 02 Dec 2011 00:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Jul 2019 12:28:12 +0800</lastBuildDate>
     
 	<atom:link href="https://tairan.net/tags/thinking/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>使用 Hugo 写作</title>
+      <link>https://tairan.net/posts/2019-07-21-write-blog-by-hugo/</link>
+      <pubDate>Sun, 21 Jul 2019 12:28:12 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2019-07-21-write-blog-by-hugo/</guid>
+      <description> 当做一件事情的时候，若动机不纯，大概率会失败，或者坚持不下去。之前，借着学习GraphQL之名，重拾在GitHub上写作，现在放弃了。
+作为一个技术爱好者，掌握了很多技能，而且还对刚出现的技术怀有热情之心，可在实际工作中会用到的确实其中一小部分。当然，高层次的技术和原理还是经常用到， 如：设计模式、架构，数据结构、算法等。但技术细节，可能在工作中永远也用不到。
+最近在公司里扮演的角色是后端开发，若要用到GraphQL，则需要前端配合，若要前端配合，要说服很多人，而且还要替他们踏平日常工作中可能会遇到的坑。
+太烦，于是使用Gatsby写博客之事，就搁浅了。
+博客，中断了多年，但写作并没有，文字分散在博客，豆瓣，知乎，简书等各处。
+近年来，国内站点使用越来越痛苦，自己的内容还是由自己来控制吧。重新回归到GitHub是必要的。
+虽说互联网是有记忆的，但中国的互联网除外。
+时代在进步，现在静态站点生成工具数不胜数，现在我选择Hugo, 内容依然是Markdown, 但环境配置实在是简单，跨平台，单一可执行文件。模板主题也很多。
+如上，自己的内容要掌握在自己的手里，源码和产品分离。源码托管我自己的Gitea站点上，细心呵护。
+不忘初心，只是写作。
+参考连接  GraphQL Hugo Gatsby Gitea 使用hugo搭建个人blog  </description>
+    </item>
     
     <item>
       <title>我的 Kindle 3</title>
