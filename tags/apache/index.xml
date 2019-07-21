@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/apache/</link>
+    <description>Recent content in Apache on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Sun, 30 Aug 2009 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/apache/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>妙用Apache虚拟主机</title>
+      <link>https://tairan.net/posts/2009-08-30-the-tips-of-apache-virtualhost/</link>
+      <pubDate>Sun, 30 Aug 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-08-30-the-tips-of-apache-virtualhost/</guid>
+      <description>如果在本地要同时测试多个网站, 通过子目录的方式访问有些不方便. 而只通过IP地址访问则无法同时访问多个站点. 这里我们就通过httpd server的虚拟主机功能和修改本地DNS文件来模拟通过域名来访问本地的多个测试站点.
+这里以apache2为例, 其他的httpd server只要支持虚拟主机也可以使用这样的方法.
+首先修改本地DNS解析文件,这样我们就可以通过域名来访问本地站点.
+Windows: C:\windows\system32\drivers\etc\hosts
+Linux: ubuntu, fedora /etc/hosts
+增加新的解析如: #ip url 192.168.1.1 www.tairan.net 192.168.1.1 www.51xna.com  Note: 这里的域名要跟虚拟主机配置中的ServerName保持一致
+基于ServerName的虚拟主机配置 NameVirtualHost *:80 ServerName www.tairan.net ServerAdmin webmaster@tairan.net DocumentRoot /var/www/tairan.net ErrorLog logs/tairan.net-error_log CustomLog logs/tairan.net-access_log common  ServerName www.51xna.com ServerAdmin webmaster@51xna.com DocumentRoot /var/www/51xna.com ErrorLog logs/51xna.com-error_log CustomLog logs/51xna.com-access_log common  
+设置完毕, 重启apache. 然后就可以通过我们指定的域名来访问在本地的网站了.
+另外虚拟主机还可以基于IP设置, 在这里并不适合我们使用.
+其他关于虚拟主机的配置参见 Apache document</description>
+    </item>
+    
+    <item>
+      <title>Apache2 &#43; Subversion 配置备忘</title>
+      <link>https://tairan.net/posts/2008-06-03-apache2-subversion-configuration/</link>
+      <pubDate>Tue, 03 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-06-03-apache2-subversion-configuration/</guid>
+      <description>http.conf
+路径可以使用绝对路径，也可以使用apache的相对路径。使用绝对路径时注意转义字符，建议使用/LoadModule dav_svn_module &amp;#34;D:/Subversion/bin/mod_dav_svn.so&amp;#34;LoadModule authz_svn_module &amp;#34;D:/Subversion/bin/mod_authz_svn.so&amp;#34;DAV svn SVNParentPath &amp;#34;D:/Subversion/Repository&amp;#34; #仓库路径AuthType Basic AuthName &amp;#34;Subversion Repository of Hacker&amp;#39;s Story&amp;#34; AuthUserFile &amp;#34;D:/Subversion/passwd&amp;#34; #使用apache htpasswd 程序生成用户名密码AuthzSVNAccessFile &amp;#34;D:/Subversion/accesspolicy&amp;#34; #用户分组和权限管理Satisfy Any Require valid-useraccesspolicy[groups]admin = daniel #分组[/]* = r #指定版本库，支持多个版本库设置@admin = rw #权限控制 </description>
+    </item>
+    
+  </channel>
+</rss>

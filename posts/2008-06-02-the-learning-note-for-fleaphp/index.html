@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>FleaPHP 学习笔记 (-) | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">June 2, 2008</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">FleaPHP 学习笔记 (-)</h1>
+  <div class="content">
+    <p>FleaPHP 上手还算是很容易的，毕竟都是中文的文档。(阅读没有什么限制)</p>
+
+<p>FleaPHP 官方网站对如何安装使用做了大量的工作，只是有些细节问题需要注意一下。下面记录下自己运行第一个controller</p>
+
+<p>下载&amp;安装</p>
+
+<p>我现在的是最新稳定版本 1.0.70.1078</p>
+
+<p>FleaPHP 的安装是很容易的，可以放到web site的任意地方，建议采用官方自带的检测工具来测试当前工作环境。</p>
+
+<p>目录结构 (简述)</p>
+
+<p>FleaPHP 的安装倒是很容易，但是开始写东西的时候就要注意了，目录结构是严格的，并且区分大小写</p>
+
+<p>demo</p>
+
+<p>/App/Controller/Default.php</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Controller_Default</span> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:rgb(0,102,0);&#34;</span><span style="color:#f92672">&gt;//</span><span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">FLEA_Controller_Action</span><span style="color:#f92672">&lt;/</span><span style="color:#a6e22e">span</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#a6e22e">img</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:rgb(0,102,0);&#34;</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1&#34;</span> <span style="color:#f92672">/&gt;&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:rgb(0,102,0);&#34;</span><span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">这里好像不需要显式继承</span><span style="color:#f92672">&lt;/</span><span style="color:#a6e22e">span</span><span style="color:#f92672">&gt;</span>
+{
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">actionIndex</span>() {
+        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;controller index&#34;</span>;   
+    }
+
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">actionSayHello</span>() {
+        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;say hello fleaPHP&#34;</span>;
+    }
+}
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div>
+
+<p>/index.php</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-PHP" data-lang="PHP"><span style="color:#75715e">&lt;?php</span>
+<span style="color:#66d9ef">require</span>(<span style="color:#e6db74">&#39;FLEA/FLEA.php&#39;</span>);
+<span style="color:#a6e22e">FLEA</span><span style="color:#f92672">::</span><span style="color:#a6e22e">import</span>(<span style="color:#a6e22e">dirname</span>(<span style="color:#66d9ef">__FILE__</span>) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;/App&#39;</span>); <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">span</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;color:rgb(0,102,0);&#34;</span><span style="color:#f92672">&gt;//</span><span style="color:#a6e22e">这是我们程序的所在地</span><span style="color:#f92672">&lt;/</span><span style="color:#a6e22e">span</span><span style="color:#f92672">&gt;</span>
+<span style="color:#a6e22e">FLEA</span><span style="color:#f92672">::</span><span style="color:#a6e22e">runMVC</span>();
+<span style="color:#75715e">?&gt;</span>
+</code></pre></div>
+
+<p>/FLEA</p>
+
+<p>FLEA 存放目录</p>
+
+<p>在这里，index.php作为一个控制中心，负责寻找和调用Controller, 如我们调用actionSayHello 那么可以通过URL 这样做
+<a href="http://localhost/?action=SayHello">http://localhost/?action=SayHello</a></p>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+

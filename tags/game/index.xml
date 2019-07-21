@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Game on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/game/</link>
+    <description>Recent content in Game on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Sat, 21 Mar 2009 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/game/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Game!</title>
+      <link>https://tairan.net/posts/2009-03-21-the-game/</link>
+      <pubDate>Sat, 21 Mar 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-03-21-the-game/</guid>
+      <description>Just for fun!</description>
+    </item>
+    
+    <item>
+      <title>QUAKE LIVE™ is now available to the public as an open beta.</title>
+      <link>https://tairan.net/posts/2009-02-27-quake-live/</link>
+      <pubDate>Fri, 27 Feb 2009 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-02-27-quake-live/</guid>
+      <description>你还在玩着那种用鼠标点啊点的网页游戏吗？ 太老土了！看看 id software 给我们带来了什么！
+http://www.quakelive.com
+Quake Live 开始公测了，这是 Quake3 基于浏览器的版本。 上班族可以利用休息时间好好的放纵一下了，Quake Live对机器配置要求不高，目前支持 Windows + IE or Firefox 组合，其他平台正在开发中。
+目前游戏玩家众多，如果进来的时候不巧，那么要经过漫长的排队才能进入游戏。
+好像在国内 Quake 的群众基础不如 CS。 不知道在 Quake Live 上能遇到多少国内的玩家。
+我实在想知道在技术上他们是怎么实现的？</description>
+    </item>
+    
+  </channel>
+</rss>

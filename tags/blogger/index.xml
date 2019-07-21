@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>blogger on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/blogger/</link>
+    <description>Recent content in blogger on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Thu, 15 May 2008 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/blogger/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我在 blogger 的第一个Blog</title>
+      <link>https://tairan.net/posts/2008-05-15-i-was-a-blogger-first-blog/</link>
+      <pubDate>Thu, 15 May 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-05-15-i-was-a-blogger-first-blog/</guid>
+      <description>每天自己都想了很多东西，但是很少有记录的，有时很好的一个idea，一觉醒来就全部忘记了。记忆出现了断层。
+现在就借助这个工具来记录一下吧，其实在网络上写blog也有很多的不方便，比如我在路上，或者暂时没有网络连接，再或者我想做一个学习笔记？
+all right, 这些总比没有强百倍。因为零到壹的难度比壹到一百的距离长万倍！</description>
+    </item>
+    
+  </channel>
+</rss>

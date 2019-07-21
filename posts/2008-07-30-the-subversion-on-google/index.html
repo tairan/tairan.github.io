@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>The Subversion on Google | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">July 30, 2008</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">The Subversion on Google</h1>
+  <div class="content">
+    <p>Google 版本服务器使用说明</p>
+
+<p>SVN 客户端安装</p>
+
+<p>下载 TortoiseSVN
+<a href="http://tortoisesvn.net/downloads">http://tortoisesvn.net/downloads</a>
+根据你当前机器操作系统的版本下载，我的机器是32bit Windows，所以下载 <a id="esfv" href="http://downloads.sourceforge.net/tortoisesvn/TortoiseSVN-1.5.1.13563-win32-svn-1.5.1.msi?download">TortoiseSVN-1.5.1.13563-win32-svn-1.5.1.msi</a>
+TortoiseSVN 提供了多语言的版本，如果需要使用中文的话，在这个页面中下载中文语言包，在安装TortoiseSVN后安装语言包后，进入到 settings 设置一下即可。</p>
+
+<p>安装
+    一路Next即可，最后会提示你是否重启电脑。选择 <b>否 </b>。
+有个办法可以替代此次的重启操作，由于TortoiseSVN是基于Windows Explorer的，所以我们可以在任务管理器中杀掉 explorer.exe 进程，然后再启用 explorer.exe 进程就完成了原本需要重启的操作。</p>
+
+<p>SVN 的日常使用
+ svn 提供了很强大的功能，而对于开发者来说，只要掌握部分常用的功能就可以了。前面已经提到如何从版本库中checkout代码。下面就说如何把修改后的代码checkin</p>
+
+<p>checkout 代码
+进入工作目录如 D:Workspace
+右键-&gt; SVN Checkout
+<div id="sve4" style="text-align:left;padding:1em 0;"><img style="width:206px;height:287px;" src="http://docs.google.com/File?id=dgbkptzx_124hhkfn7tk_b"></div>指定 SVN 服务器地址
+<img style="width:451px;height:347px;" src="http://docs.google.com/File?id=dgbkptzx_125dp56nwgv_b"></p>
+
+<p>输入用户名密码，注意：用户名为 gmail 帐号，但不含@gmail后缀。密码参考下面说明
+<div id="ki26" style="text-align:left;padding:1em 0;"><img style="width:666px;height:307px;" src="http://docs.google.com/File?id=dgbkptzx_126d256dcq4_b"></div>密码：进入到 <a href="http://code.google.com/p/2dcms/source/checkout">http://code.google.com/p/2dcms/source/checkout</a>
+<div id="emra" style="text-align:left;padding:1em 0;"><img style="width:667px;height:90px;" src="http://docs.google.com/File?id=dgbkptzx_127wb4m4wgq_b"></div>点击 googlecode.com password 链接，把GoogleCode生成的密码贴到上面的密码框内。点击ok即可把项目源码checkout到本地。注意，你可以选中 Save authentication 这样就不用每次都输入这奇怪的密码</p>
+
+<p>到此，就可以使用GoogleCode提供的svn服务了。</p>
+
+<p>提交代码
+1. 进入到本地的checkout目录，如 D:workspace2dcms
+2. 右键-&gt;SVN Commit&hellip;
+<div id="yy-h" style="text-align:left;padding:1em 0;"><img style="width:253px;height:235px;" src="http://docs.google.com/File?id=dgbkptzx_128gc3twmhm_b"></div>3. 选择需要checkin的代码以及相关资源等，如图片，css，js等文件。
+注意：
+新增的文件默认是不选中状态，如果需要checkin，选中相关文件。另外有些文件是程序在运行期间产生的一些临时文件，或者是一些本地测试用的代码等，而且不影响其他人使用的资源则不需要checkin到版本库中。这样能减少垃圾的存在，使大家在sync代码的时候速度更快一些。
+每次提交代码必须填写说明。把此次checkin的意图说清楚。如：增加某个功能，修复某个bug 等。
+<div id="dygd" style="text-align:left;padding:1em 0;"><img style="width:546px;height:490px;" src="http://docs.google.com/File?id=dgbkptzx_129c7sdrwgd_b"></div>
+更新代码 Update
+SVN 是一个支持多人协作开发的版本库，为了保证本地的代码是最新的，需要定期的Update代码。也就是把别人提交的代码更新到本地。至于Update的频率，一般建议开始工作前使用Update操作。</p>
+
+<p>进入到工作目录后，Update 命令同样可以在右键菜单中找到。Update命令很简单，就不贴图介绍了。</p>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+

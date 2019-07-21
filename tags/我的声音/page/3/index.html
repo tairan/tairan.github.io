@@ -1,0 +1,298 @@
+
+<div class="container">
+  <!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>我的声音 | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+  <div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class="container">
+      
+      
+      <h1 class="title is-3">2008</h1>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jul 4</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-07-04-some-linux-commands-for-accounts-management/">Linux用户管理的一些命令</a></h1>
+          <div class="content is-hidden-mobile">
+            useradd # 添加用户adduser # 添加用户passwd # 为用户设置密码usermod # 修改用户命令，可以通过usermod 来修改登录名、用户的家目录等等pwcov # 同步用户从/etc/passwd 到/etc/shadowpwck # pwck是校验用户配置文件/etc/passwd 和/etc/shadow 文件内容是否合法或完整pwunconv # 是pwcov 的立逆向操作，是从/etc/shadow和 /etc/passwd 创建/etc/passwd ，然后会删除 /etc/shadow 文件finger # 查看用户信息工具id # 查看用户的UID、GID及所归属的用户组chfn # 更改用户信息工具su # 用户切换工具sudo # sudo 是通过另一个用户来执行命令（execute a command as …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jul 3</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-07-03-some-notes-of-subversion/">一些关于Subversion的记录</a></h1>
+          <div class="content is-hidden-mobile">
+            强制用户写日志有两种方法可以防止用户在不写日志的情况下进行提交操作。一种方式只对TortoiseSVN有效，另外一种方法对任何Subversion的客户端都有效，但是需要直接访问服务器。
+服务器端的钩子脚本(Hook-script)如果能够直接访问服务器，可以安装一个pre-commit钩子脚本，通过这个脚本可以阻止所有空白日志或者日志太简短的提交操作。
+In the repository folder on the server, there&rsquo;s a sub-folder hooks which contains some example hook scripts you can use. The file pre-commit.tmpl contains a sample script which will reject commits if no log message …
+            
+            <br>
+            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2008-07-03-some-notes-of-subversion/">
+            <span class="icon-link is-small" style="line-height: 100%">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </span>
+              <p style="padding:0 5px"></p>more</p>
+            </a>
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jun 30</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-30-freebsd-proxy-settings/">FreeBSD设置代理</a></h1>
+          <div class="content is-hidden-mobile">
+            FreeBSD设置代理, 在FreeBSD中默认安装的是CSH，所以设置代理时应该使用 setenv
+setenv HTTP_PROXY xxx.xxx.xxx.xxx:portsetenv FTP_PROXY xxx.xxx.xxx.xxx:port 这里只能只能使用IP地址。
+BASH 的设置如下
+expor HTTP_PROXY=http://proxy.host.url:port btw： 经过几次安装FreeBSD实战后，慢慢对FreeBSD有些认识了。继续努力！
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jun 26</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-26-sc-is-service-control/">使用SC创建/删除Windows Services</a></h1>
+          <div class="content is-hidden-mobile">
+            DESCRIPTION:SC is a command line program used for communicating with theService Control Manager and services.&lt;br /&gt;USAGE:sc [command] [service name] ...&lt;br /&gt;&lt;br /&gt;The option has the form &#34;ServerName&#34;Further help on commands can be obtained by typing: &#34;sc [command]&#34;Commands:query-----------Queries the status for a service, orenumerates the status for types …
+            
+            <br>
+            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2008-06-26-sc-is-service-control/">
+            <span class="icon-link is-small" style="line-height: 100%">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </span>
+              <p style="padding:0 5px"></p>more</p>
+            </a>
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jun 24</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-24-the-power-of-habit-is-strong/">习惯的力量很强大</a></h1>
+          <div class="content is-hidden-mobile">
+            python是一个不错的语言，平时工作的时候使用C#，有些时候需要写一些代码来做字符的处理，或者是一些可以使用script语言解决的tool，此时C#就显得有些臃肿，如果再加上巨无霸级别的VSTS就可想而知了。
+我们是被Microsoft宠坏的developer，在Windows的平台上生生不息的卖命工作。今天下午准备抄起python写个tool的时候，发现关于python的记忆所剩无几了。一直想迁移到Linux的自由天地，可身上像是被铁链紧紧锁住一般，动弹不得！
+现实和梦想之间是有距离的！
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jun 3</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-03-apache2-subversion-configuration/">Apache2 &#43; Subversion 配置备忘</a></h1>
+          <div class="content is-hidden-mobile">
+            http.conf
+路径可以使用绝对路径，也可以使用apache的相对路径。使用绝对路径时注意转义字符，建议使用/LoadModule dav_svn_module &#34;D:/Subversion/bin/mod_dav_svn.so&#34;LoadModule authz_svn_module &#34;D:/Subversion/bin/mod_authz_svn.so&#34;DAV svn SVNParentPath &#34;D:/Subversion/Repository&#34; #仓库路径AuthType Basic AuthName &#34;Subversion Repository of Hacker&#39;s Story&#34; AuthUserFile &#34;D:/Subversion/passwd&#34; #使用apache …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jun 2</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-02-the-learning-note-for-fleaphp/">FleaPHP 学习笔记 (-)</a></h1>
+          <div class="content is-hidden-mobile">
+            FleaPHP 上手还算是很容易的，毕竟都是中文的文档。(阅读没有什么限制)
+FleaPHP 官方网站对如何安装使用做了大量的工作，只是有些细节问题需要注意一下。下面记录下自己运行第一个controller
+下载&amp;安装
+我现在的是最新稳定版本 1.0.70.1078
+FleaPHP 的安装是很容易的，可以放到web site的任意地方，建议采用官方自带的检测工具来测试当前工作环境。
+目录结构 (简述)
+FleaPHP 的安装倒是很容易，但是开始写东西的时候就要注意了，目录结构是严格的，并且区分大小写
+demo
+/App/Controller/Default.php
+&lt;?phpclass Controller_Default &lt;span style=&#34;color:rgb(0,102,0);&#34;&gt;//extends …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">May 19</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-05-19-my-vimrc/">我的 Vim 环境设置</a></h1>
+          <div class="content is-hidden-mobile">
+            为了保证知识的连续性，所以我选择了vim。并且慢慢的开始习惯。。。但是这样也带来一个后果，就是总是在编辑的时候想按&lt;esc&gt;或者&lt;i&gt;来切换命令和编辑模式。:)
+我的配置文件还是有一些个人特色的，毕竟被Windows侵蚀多年，有些习惯还不是一时半会能改过来的，所以就把Windows上的一些编辑快捷键也加入进来了。
+&#34;&#34; Simplify settings for VIM 7.x or later&#34;&#34; Copyright (c) 2008, 2009 Tairan Wang All Rights Reserved.&#34;&#34; Tairan Wang &lt;tairan.wang(at)gmail.com&gt;&#34;&#34; $Id: vimrc 38 2009-02-06 03:16:59Z …
+            
+            <br>
+            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2008-05-19-my-vimrc/">
+            <span class="icon-link is-small" style="line-height: 100%">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </span>
+              <p style="padding:0 5px"></p>more</p>
+            </a>
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">May 19</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-05-19-focus-typos-appear/">焦点访谈出现错别字？</a></h1>
+          <div class="content is-hidden-mobile">
+            2008/05/19 的焦点访谈节目出现 &ndash; 举国志哀
+而节目中的相关媒体新闻用字确是 &ndash; 举国致哀
+是错别字，还是各有其意？
+在天涯看到一位网友出来解释：[转]http://cache.tianya.cn/publicforum/content/free/1/1253505.shtml
+现代汉语词典解释:
+ 志哀:以某种方式表示哀悼.
+致哀:向死者表示哀悼.
+ 原来都没错！
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">May 15</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-05-15-i-was-a-blogger-first-blog/">我在 blogger 的第一个Blog</a></h1>
+          <div class="content is-hidden-mobile">
+            每天自己都想了很多东西，但是很少有记录的，有时很好的一个idea，一觉醒来就全部忘记了。记忆出现了断层。
+现在就借助这个工具来记录一下吧，其实在网络上写blog也有很多的不方便，比如我在路上，或者暂时没有网络连接，再或者我想做一个学习笔记？
+all right, 这些总比没有强百倍。因为零到壹的难度比壹到一百的距离长万倍！
+            
+          </div>
+      </article>
+      
+      
+      
+  </main>
+  <section class="section">
+  <div class="container">
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <div class="level-item">
+          
+          <a class="button is-rounded" href="/tags/%E6%88%91%E7%9A%84%E5%A3%B0%E9%9F%B3/page/2/">
+            <span class="icon is-small is-marginless">
+              <i class="fa fa-angle-left"></i>
+            </span>
+            Newer
+          </a>
+          
+        </div>
+      </div>
+      <div class="level-right is-marginless">
+        <div class="level-item">
+          
+          <a class="button is-rounded" disabled>
+            Older
+            <span class="icon is-small is-marginless">
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
+
+  <section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</div>

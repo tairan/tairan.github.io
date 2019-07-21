@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>转战亚马逊EC2 | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">April 14, 2011</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">转战亚马逊EC2</h1>
+  <div class="content">
+    <p>EC2 Nginx PHP FastCGI MySQL WordPress</p>
+
+<p>关于 Amazon EC2 的教程已经铺天盖地了，有英文也有<a href="http://www.baidu.com.ru/archives/556.html">中文</a>。现在EC2对新注册的用户有优惠，及Micro Instance级别的会有1年的<a href="http://aws.amazon.com/free/">免费</a>份额。注意只是对新注册用户，如果你已经注册了 AWS 账户，即使并没有开通任何服务也不属于新注册用户，意思就是只要你使用就没有免费的。这一点我是用了$2美金的账单换来的教训。<a href="http://www.poemcode.net/2011/04/aws-free-usage-tier/">网上也有其他同学遇到</a>，看来不仔细阅读文档就是没文化的代表。这里是账单查询地址<a href="https://aws-portal.amazon.com/gp/aws/developer/account/index.html?ie=UTF8&action=activity-summary">https://aws-portal.amazon.com/gp/aws/developer/account/index.html?ie=UTF8&action=activity-summary</a> 一旦发现产生莫名其妙的费用，赶紧查。</p>
+
+<p>我这次使用 Amazon EC2 的目的是把即将到期的博客迁移到这里，并且让手中的一些闲置域名也利用起来。其中还有一个更重要的目的就是为部署一个很重要的网站，基于Django的。</p>
+
+<p>首先要做的是迁移博客。
+进入 EC2 后需要安装一些软件，因为Micro Instance只能使用Amazon Linux(redhat系)，所以包管理器使用的是yum。</p>
+
+<pre><code class="language-bash">sudo yum install mysql mysql-libs mysql-server php php-mysql spawn-fcgi nginx
+</code></pre>
+
+<p>启动MySQL后，并更改root用户的密码</p>
+
+<pre><code class="language-bash">sudo service mysqld start
+/usr/bin/mysqladmin -u root -p -h localhost password 'newpassword'
+</code></pre>
+
+<p>配置 Nginx， 在这里我遇到了一些问题，折腾了一天才搞定。这里要十分的感谢网友 <a href="http://www.douban.com/people/hfw_1987/">hfw_1984</a> 的帮助。遇到的问题主要集中在fastcgi部分，如果要让Nginx支持我博客的URL格式如<a href="http://www.tairan.net/index.php/2011/03/30/follow-the-right-way/">http://www.tairan.net/index.php/2011/03/30/follow-the-right-way/</a> 则必须参照以下配置：</p>
+
+<pre><code class="language-ApacheConf">    location ~ ^.+\.php {
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;  # 这一行必须放在 SCRIPT_FILENAME 上面，否则会被覆盖。
+        fastcgi_param   SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        #fastcgi_param   PATH_INFO   $fastcgi_path_info; # 这两行并不需要
+        #fastcgi_param   PATH_TRANSLATED $document_root$fastcgi_path_info;
+        include /etc/nginx/fastcgi_params;
+        fastcgi_pass 127.0.0.1:9000;
+    }
+</code></pre>
+
+<p>Micro Instance 默认提供的Nginx Version: 0.8.53</p>
+
+<p>以上就是这两天的战果，还有其他的一些东西已经被写成自动化脚本，为方便备份数据，再次迁移、部署提供方便。</p>
+
+<p>总的来说在墙内，使用EC2也不错，性价比不是最好，但是绝对值得试用。:-)</p>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+

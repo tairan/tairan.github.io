@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Habit on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/habit/</link>
+    <description>Recent content in Habit on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Tue, 24 Jun 2008 00:00:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/habit/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>习惯的力量很强大</title>
+      <link>https://tairan.net/posts/2008-06-24-the-power-of-habit-is-strong/</link>
+      <pubDate>Tue, 24 Jun 2008 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-06-24-the-power-of-habit-is-strong/</guid>
+      <description>python是一个不错的语言，平时工作的时候使用C#，有些时候需要写一些代码来做字符的处理，或者是一些可以使用script语言解决的tool，此时C#就显得有些臃肿，如果再加上巨无霸级别的VSTS就可想而知了。
+我们是被Microsoft宠坏的developer，在Windows的平台上生生不息的卖命工作。今天下午准备抄起python写个tool的时候，发现关于python的记忆所剩无几了。一直想迁移到Linux的自由天地，可身上像是被铁链紧紧锁住一般，动弹不得！
+现实和梦想之间是有距离的！</description>
+    </item>
+    
+  </channel>
+</rss>

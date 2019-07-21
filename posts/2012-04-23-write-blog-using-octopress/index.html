@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>使用 Octopress 写博客 | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">April 23, 2012</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">使用 Octopress 写博客</h1>
+  <div class="content">
+    <p><a href="http://git-scm.com">Git</a>改变了众多程序员的生活，让写代码真正的成为了生活的一部分。<a href="http://github.com">GitHub</a>让团队合作变得更容易。除了代码，博客也可以如此。</p>
+
+<p><a href="http://jekyllrb.com">Jekyll</a>就是将博客托管到Github的一个工具，它把你的博客从<a href="http://daringfireball.net/projects/markdown/">Markdown</a>或者<a href="http://textile.sitemonks.com/">Textile</a>格式转成HTML页面，Github 提供的 <a href="http://pages.github.com/">Pages</a>则负责了博客的发布工作。</p>
+
+<p><a href="http://octopress.org">Octopress</a> 则是在 Jekyll 的基础上提供了显示样式和一些插件，让博客变得更美，部署更容易。</p>
+
+<p>Github 支持 CNAME ，允许你将自己的独立域名解析过来。</p>
+
+<p>使用 Octopress 写博客的流程通常是：</p>
+
+<ul>
+<li><p>在Github上创建特定名称的仓库如 tairan.github.com 其中 tairan 是我的 Github 登录帐号, <em>注意</em>: 在此仓库的管理员页面是没有 gh-page 选项的</p></li>
+
+<li><p>从 octopress 把代码克隆到自己的仓库中</p></li>
+</ul>
+
+<pre><code class="language-bash"> git clone https://octopress.github.com/ tairan.github.com
+</code></pre>
+
+<ul>
+<li>更新 octopress</li>
+</ul>
+
+<pre><code class="language-batch">bundle update
+</code></pre>
+
+<ul>
+<li>将代码 Push 到自己的仓库中</li>
+</ul>
+
+<pre><code class="language-bash">git remote add origin http://tairan.github.com
+git push -a source origin
+</code></pre>
+
+<ul>
+<li>写博客</li>
+</ul>
+
+<pre><code class="language-bash">rake new_post['this is a test blog']
+</code></pre>
+
+<p>默认 master 分支是用来存放最终生成的静态页面</p>
+
+<p>我们可以在此仓库中增加一个 source 分支用来存放博客源文件。</p>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+

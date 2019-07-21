@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>Drupal | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">November 23, 2009</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">Drupal</h1>
+  <div class="content">
+    <p><a href="http://drupal.org" target="_blank">Drupal</a>是一个出色的开源CMS系统，<a href="http://drupal.org/node/375843" target="_blank">Whithouse</a>也在使用。
+现在把我今天配置Drupal的时候遇到一些问题以及解决办法记录在此，备查。</p>
+
+<p>软件版本信息
+Windows7
+IIS7 + FastCGI
+php-5.3.1-nts-Win32-VC9-x86
+drupal-6.14</p>
+
+<p>在PHP官方文档中提供了IIS7如何使用FastCGI配置PHP，需要注意的是当启用php.ini-development作为php.ini配置环境时，在CGI部分默认的是无法工作的，需要做如下修改
+<pre lang="INI">
+cgi.force_redirect = 1
+cgi.nph = 0
+cgi.fix_pathinfo = 1
+fastcgi.impersonate = 0
+fastcgi.logging = 1
+cgi.rfc2616_headers = 0
+</pre></p>
+
+<p>在php.ini文件中需要启用的 extension
+<pre lang="INI">
+extension=php_gd2.dll    ;用来画图
+extension=php_mbstring.dll   ;多语言支持
+extension=php_mysql.dll    ;连接MySQL
+extension=php_pdo_mysql.dll    ;使用PDO的方式连接MySQL，非Drupal必须
+extension=php_sqlite3.dll    ;连接sqlite3，非Drupal必须
+extension=php_xmlrpc.dll    ;xmlprc实现接口，非Drupal必须
+</pre>
+使用PHP5.3会有遇到 Function ereg() is deprecated Error 在询问了万能的Google后并参考这篇文章<a href="http://www.wordpresscool.cn/2009/08/21/function-ereg-is-deprecated-error-%E9%94%99%E8%AF%AF%E5%AF%B9%E7%AD%96/" target="_blank">Function ereg() is deprecated Error 错误对策</a>，使用文章中提到的最后一种办法来解决这个问题：
+在 drupal\includes\file.inc 第 902 行
+<pre lang="php">
+//elseif ($depth &gt;= $min_depth &amp;&amp; ereg($mask, $file)) {
+elseif ($depth &gt;= $min_depth &amp;&amp; preg_match(&lsquo;/&rsquo;.$mask.&lsquo;/&rsquo;, $file)) {
+</pre>
+默认的php.ini-development还会遇到一个时区(date.timezone)的问题需要修改php.ini
+<pre lang="INI">
+[Date]
+date.timezone = &ldquo;Asia/Shanghai&rdquo;
+</pre></p>
+
+<p>另外还遇到一个Drupal设置的问题，default.settings.php 文件是不能删除的，至少在安装过程中需要，因为配置程序会读这个文件。</p>
+
+<p>以上就是今天安装Drupal的一些总结，接下来再仔细研究如何在Drupal上做二次的开发。我就不信开源的程序搞不出符合国情的站点。</p>
+
+<p>EOF</p>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+

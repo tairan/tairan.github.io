@@ -1,0 +1,997 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://tairan.net/posts/</loc>
+    <lastmod>2012-04-23T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/</loc>
+    <lastmod>2012-04-23T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/</loc>
+    <lastmod>2012-04-23T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/technology/</loc>
+    <lastmod>2012-04-23T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2012-04-23-write-blog-using-octopress/</loc>
+    <lastmod>2012-04-23T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2012-04-15-the-go-with-win32-api/</loc>
+    <lastmod>2012-04-15T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/thinking/</loc>
+    <lastmod>2011-12-02T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2011-12-02-kindle-3-for-me/</loc>
+    <lastmod>2011-12-02T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2011-06-28-dev-for-custom-software/</loc>
+    <lastmod>2011-06-28T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/linux/</loc>
+    <lastmod>2011-06-20T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2011-06-20-install-flashplayer-64bit-for-fedora-15/</loc>
+    <lastmod>2011-06-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2011-04-14-move-on-amazon-ec2/</loc>
+    <lastmod>2011-04-14T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2011-03-30-follow-the-right-way/</loc>
+    <lastmod>2011-03-30T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/.net/</loc>
+    <lastmod>2011-03-26T00:00:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2011-03-26-is-first-run/</loc>
+    <lastmod>2011-03-26T00:00:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2011-02-24-how-to-deploy-django-app-on-alwaysdata/</loc>
+    <lastmod>2011-02-24T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-11-29-note-of-founders-at-work/</loc>
+    <lastmod>2010-11-29T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2010-11-29T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-10-26-that-is-life/</loc>
+    <lastmod>2010-10-26T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-10-21-security-and-ease-of-use/</loc>
+    <lastmod>2010-10-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-10-12-get-adsl-ip-use-app-engine/</loc>
+    <lastmod>2010-10-12T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-10-06-walk-in-night/</loc>
+    <lastmod>2010-10-06T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E6%B8%B8%E8%AE%B0/</loc>
+    <lastmod>2010-10-06T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-09-18-note-of-the-facebook/</loc>
+    <lastmod>2010-09-18T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-08-29-find-the-job/</loc>
+    <lastmod>2010-08-29T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-07-26-go-to-shanghai-by-bike/</loc>
+    <lastmod>2010-07-26T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-06-23-my-way-for-learning-kohana/</loc>
+    <lastmod>2010-06-23T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-05-28-shared-by-simplehttpserver/</loc>
+    <lastmod>2010-05-28T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-04-16-how-to-identify-mobile-browser/</loc>
+    <lastmod>2010-04-16T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-02-22-building-the-linux-for-myself/</loc>
+    <lastmod>2010-02-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-02-20-genius-is-example/</loc>
+    <lastmod>2010-02-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E8%BD%AC%E8%BD%BD/</loc>
+    <lastmod>2010-02-20T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-01-13-google-considers-leaving-china/</loc>
+    <lastmod>2010-01-13T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2010-01-05-avatar/</loc>
+    <lastmod>2010-01-05T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-12-15-guo-jin-min-tui/</loc>
+    <lastmod>2009-12-15T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/drupal/</loc>
+    <lastmod>2009-12-02T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-12-02-understand-the-google-module-drupal-modules/</loc>
+    <lastmod>2009-12-02T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-11-24-drupal-overview/</loc>
+    <lastmod>2009-11-24T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-11-23-setup-drupal/</loc>
+    <lastmod>2009-11-23T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-11-22-using-the-swap-file/</loc>
+    <lastmod>2009-11-22T00:00:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-11-16-storage-on-cloud/</loc>
+    <lastmod>2009-11-16T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-11-07-the-snippet-of-thinking/</loc>
+    <lastmod>2009-11-07T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-10-16-you-go-to-work-for-what/</loc>
+    <lastmod>2009-10-16T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-10-14-my-linux-kvm/</loc>
+    <lastmod>2009-10-14T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-10-11-shanghai-zoo/</loc>
+    <lastmod>2009-10-11T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-10-10-linux-destop-is-very-nice/</loc>
+    <lastmod>2009-10-10T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-09-18-how-to-become-a-hacker/</loc>
+    <lastmod>2009-09-18T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-09-16-management-for-your-mind/</loc>
+    <lastmod>2009-09-16T00:00:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-09-16-management-for-your-mind/</loc>
+    <lastmod>2009-09-16T00:00:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-09-16-do-you-know-how-many-is-enough/</loc>
+    <lastmod>2009-09-16T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-09-10-how-to-eat-linux-distribution/</loc>
+    <lastmod>2009-09-10T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-09-08-my-blog-update-theme/</loc>
+    <lastmod>2009-09-08T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-09-07-look-this-accost-man/</loc>
+    <lastmod>2009-09-07T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/apache/</loc>
+    <lastmod>2009-08-30T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-08-30-the-tips-of-apache-virtualhost/</loc>
+    <lastmod>2009-08-30T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-08-28-looks-tao/</loc>
+    <lastmod>2009-08-28T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-08-18-discard-live-domain/</loc>
+    <lastmod>2009-08-18T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-08-17-security-for-expo-shanghai/</loc>
+    <lastmod>2009-08-17T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E4%B8%96%E5%8D%9A%E4%BC%9A/</loc>
+    <lastmod>2009-08-17T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-08-12-i-am-running-what-to-wear/</loc>
+    <lastmod>2009-08-12T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-08-04-shanghai-museum-travels/</loc>
+    <lastmod>2009-08-04T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-07-30-i-am-tired/</loc>
+    <lastmod>2009-07-30T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-07-16-the-rule-2/</loc>
+    <lastmod>2009-07-16T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-07-11-cannot-help-doing/</loc>
+    <lastmod>2009-07-11T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-07-06-the-latest-url-of-this-site/</loc>
+    <lastmod>2009-07-06T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-07-02-young-sex/</loc>
+    <lastmod>2009-07-02T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-07-01-the-security-internet/</loc>
+    <lastmod>2009-07-01T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-29-the-talk-of-junyu-before-leave-the-baidu-company/</loc>
+    <lastmod>2009-06-29T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2009-06-29T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-27-i-am-a-memory/</loc>
+    <lastmod>2009-06-27T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-26-i-am-a-hard-disk/</loc>
+    <lastmod>2009-06-26T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-25-a-pile-of-shit-on-the-pavement/</loc>
+    <lastmod>2009-06-25T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-24-go-to-happy/</loc>
+    <lastmod>2009-06-24T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-22-where-is-freedom/</loc>
+    <lastmod>2009-06-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E6%88%91%E7%9A%84%E5%A3%B0%E9%9F%B3/</loc>
+    <lastmod>2009-06-21T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-21-what-is-then/</loc>
+    <lastmod>2009-06-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-20-caodan/</loc>
+    <lastmod>2009-06-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-18-chitchat/</loc>
+    <lastmod>2009-06-18T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E5%A4%87%E6%A1%88/</loc>
+    <lastmod>2009-06-17T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-06-17-the-return-of-the-king/</loc>
+    <lastmod>2009-06-17T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-05-06-vmware-server-on-slackware/</loc>
+    <lastmod>2009-05-06T00:00:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-05-06-portable-applications/</loc>
+    <lastmod>2009-05-06T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-04-29-the-mask/</loc>
+    <lastmod>2009-04-29T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/microsoft/</loc>
+    <lastmod>2009-04-24T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-04-24-downward-compatible/</loc>
+    <lastmod>2009-04-24T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-04-20-100books-to-100saying/</loc>
+    <lastmod>2009-04-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-04-19-windows-live-admin-center/</loc>
+    <lastmod>2009-04-19T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-04-18-small-site-arch/</loc>
+    <lastmod>2009-04-18T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-04-17-dragon-lady/</loc>
+    <lastmod>2009-04-17T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-03-30-the-linux-initating-order/</loc>
+    <lastmod>2009-03-30T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/game/</loc>
+    <lastmod>2009-03-21T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-03-21-the-game/</loc>
+    <lastmod>2009-03-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-03-19-revenue-in-china/</loc>
+    <lastmod>2009-03-19T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-03-17-kongzi/</loc>
+    <lastmod>2009-03-17T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E5%93%B2%E5%AD%A6/</loc>
+    <lastmod>2009-03-17T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-03-14-the-ide-is-good-or-evil/</loc>
+    <lastmod>2009-03-14T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-03-10-the-cash-is-king/</loc>
+    <lastmod>2009-03-10T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/finance/</loc>
+    <lastmod>2009-03-10T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-03-09-environment/</loc>
+    <lastmod>2009-03-09T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-03-01-run-trac-on-windows-used-scgi-protocol/</loc>
+    <lastmod>2009-03-01T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-02-27-quake-live/</loc>
+    <lastmod>2009-02-27T00:00:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-02-27-fire-and-motion/</loc>
+    <lastmod>2009-02-27T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-02-13-dont-up-to-date/</loc>
+    <lastmod>2009-02-13T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-02-04-the-note-of-install-hyper-v-on-windows-2008-server/</loc>
+    <lastmod>2009-02-04T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/windows/</loc>
+    <lastmod>2009-02-04T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-01-13-windows-7-beta/</loc>
+    <lastmod>2009-01-13T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-01-08-install-grub-using-grub-install/</loc>
+    <lastmod>2009-01-08T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2009-01-07-multisystem-boot-via-grub/</loc>
+    <lastmod>2009-01-07T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/movie/</loc>
+    <lastmod>2008-12-31T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-12-31-when-a-child-is-born/</loc>
+    <lastmod>2008-12-31T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-12-26-remote-control-via-gtalk-xmpp/</loc>
+    <lastmod>2008-12-26T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-12-22-get-faster-gmail/</loc>
+    <lastmod>2008-12-22T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-12-19-haha-spam/</loc>
+    <lastmod>2008-12-19T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/financial/</loc>
+    <lastmod>2008-12-09T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-12-09-financial-management/</loc>
+    <lastmod>2008-12-09T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-30-ide-is-not-enough/</loc>
+    <lastmod>2008-11-30T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-29-good-eye/</loc>
+    <lastmod>2008-11-29T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/python/</loc>
+    <lastmod>2008-11-25T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-25-why-webpy-is-instable/</loc>
+    <lastmod>2008-11-25T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-24-wangshouren/</loc>
+    <lastmod>2008-11-24T00:00:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-24-jtslczs/</loc>
+    <lastmod>2008-11-24T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-21-code-as-design/</loc>
+    <lastmod>2008-11-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-14-encoding/</loc>
+    <lastmod>2008-11-14T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-07-install-centos-linux-via-http/</loc>
+    <lastmod>2008-11-07T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-06-dotnet-globalization/</loc>
+    <lastmod>2008-11-06T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-11-04-130km-day/</loc>
+    <lastmod>2008-11-04T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-10-29-the-c-library/</loc>
+    <lastmod>2008-10-29T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-10-28-moerdinglv/</loc>
+    <lastmod>2008-10-28T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-10-24-bruce-lee/</loc>
+    <lastmod>2008-10-24T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-10-21-zhixingheyi/</loc>
+    <lastmod>2008-10-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-10-20-iis-fastcgi/</loc>
+    <lastmod>2008-10-20T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-10-16-moving-to-wordpress-from-google-blogger/</loc>
+    <lastmod>2008-10-16T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/wordpress/</loc>
+    <lastmod>2008-10-16T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-10-09-not-see-all-things/</loc>
+    <lastmod>2008-10-09T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-09-25-pay-attention-to-methods/</loc>
+    <lastmod>2008-09-25T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-09-21-using-the-good-tools/</loc>
+    <lastmod>2008-09-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-09-17-strong-support-for-web-standards/</loc>
+    <lastmod>2008-09-17T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E6%B7%98%E5%AE%9D/</loc>
+    <lastmod>2008-09-16T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-09-16-the-api-of-tobao/</loc>
+    <lastmod>2008-09-16T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-09-09-save-labor/</loc>
+    <lastmod>2008-09-09T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/subversion/</loc>
+    <lastmod>2008-09-08T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-09-08-i-want-to-cry-but-i-have-not-any-tear/</loc>
+    <lastmod>2008-09-08T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-09-06-know-is-do/</loc>
+    <lastmod>2008-09-06T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/chrome/</loc>
+    <lastmod>2008-09-03T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/google/</loc>
+    <lastmod>2008-09-03T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-09-03-google-chrome/</loc>
+    <lastmod>2008-09-03T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-31-50km/</loc>
+    <lastmod>2008-08-31T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-28-ie-8-beta-2-is-good/</loc>
+    <lastmod>2008-08-28T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-27-what-is-erp/</loc>
+    <lastmod>2008-08-27T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-25-lambda-in-python/</loc>
+    <lastmod>2008-08-25T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-24-first/</loc>
+    <lastmod>2008-08-24T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-21-do-not-have-an-excuse/</loc>
+    <lastmod>2008-08-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-18-only-failure-is-not-enough/</loc>
+    <lastmod>2008-08-18T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E6%B2%9F%E9%80%9A/</loc>
+    <lastmod>2008-08-17T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-17-communicate/</loc>
+    <lastmod>2008-08-17T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-12-decade-of-programming-institute/</loc>
+    <lastmod>2008-08-12T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-11-a-silence-of-pig/</loc>
+    <lastmod>2008-08-11T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/</loc>
+    <lastmod>2008-08-11T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-07-jottings/</loc>
+    <lastmod>2008-08-07T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/vim/</loc>
+    <lastmod>2008-08-06T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-08-06-vim/</loc>
+    <lastmod>2008-08-06T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-07-30-the-subversion-on-google/</loc>
+    <lastmod>2008-07-30T00:00:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/django/</loc>
+    <lastmod>2008-07-30T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-07-30-the-note-of-learning-django/</loc>
+    <lastmod>2008-07-30T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-07-28-to-do-open-your-source/</loc>
+    <lastmod>2008-07-28T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-07-21-themselves-how-much-time/</loc>
+    <lastmod>2008-07-21T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/trac/</loc>
+    <lastmod>2008-07-08T00:00:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-07-08-the-note-of-install-the-trac-issue-trace-system/</loc>
+    <lastmod>2008-07-08T00:00:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-07-08-the-media-is-only-a-messenger/</loc>
+    <lastmod>2008-07-08T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-07-04-some-linux-commands-for-accounts-management/</loc>
+    <lastmod>2008-07-04T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-07-03-some-notes-of-subversion/</loc>
+    <lastmod>2008-07-03T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/freebsd/</loc>
+    <lastmod>2008-06-30T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-06-30-freebsd-proxy-settings/</loc>
+    <lastmod>2008-06-30T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-06-26-sc-is-service-control/</loc>
+    <lastmod>2008-06-26T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/habit/</loc>
+    <lastmod>2008-06-24T00:00:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-06-24-the-power-of-habit-is-strong/</loc>
+    <lastmod>2008-06-24T00:00:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/unix/</loc>
+    <lastmod>2008-06-04T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-06-04-using-grep-sed-and-awk/</loc>
+    <lastmod>2008-06-04T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-06-03-apache2-subversion-configuration/</loc>
+    <lastmod>2008-06-03T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/fleaphp/</loc>
+    <lastmod>2008-06-02T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-06-02-the-learning-note-for-fleaphp/</loc>
+    <lastmod>2008-06-02T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/php/</loc>
+    <lastmod>2008-06-02T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/web-framework/</loc>
+    <lastmod>2008-06-02T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-05-19-my-vimrc/</loc>
+    <lastmod>2008-05-19T00:00:02+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/cctv/</loc>
+    <lastmod>2008-05-19T00:00:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-05-19-focus-typos-appear/</loc>
+    <lastmod>2008-05-19T00:00:01+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-05-19-do-not-sell-it-to-him/</loc>
+    <lastmod>2008-05-19T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/blogger/</loc>
+    <lastmod>2008-05-15T00:00:00+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2008-05-15-i-was-a-blogger-first-blog/</loc>
+    <lastmod>2008-05-15T00:00:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

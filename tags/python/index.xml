@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/python/</link>
+    <description>Recent content in Python on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Tue, 25 Nov 2008 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Why webpy is instable?</title>
+      <link>https://tairan.net/posts/2008-11-25-why-webpy-is-instable/</link>
+      <pubDate>Tue, 25 Nov 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-11-25-why-webpy-is-instable/</guid>
+      <description>有时脑袋有了idea，就想马上实现它。原本PHP是个不错的选择，可是自己以后的工作和规划中已经排除了它，取而代之的是Python。
+用Python写一个简单的web application可不是那么容易的事情，以前玩了一段时间的Django，那时还不是1.0 Release版本。好不容易盼到Django 1.0 release了，却发现有很多东西不认识了。怎奈写一个小东东就这么难呢？
+寻寻觅觅，忽见web.py是一个更简洁的framework，so, 看文档，做练习。从下班一直捣鼓到此时22:55，发现web.py这个framework中还是有很多Bug的。
+官方释放版本是0.23，在cookbook中写到如何使用subapplication。 blog.py import web urls = ( &amp;ldquo;&amp;rdquo;, &amp;ldquo;reblog&amp;rdquo;, &amp;ldquo;/(.*)&amp;ldquo;, &amp;ldquo;blog&amp;rdquo; )
+class reblog: def GET(self): raise web.seeother(&amp;lsquo;/&amp;rsquo;)
+class blog: def GET(self, path): return &amp;ldquo;blog &amp;rdquo; + path
+app_blog = web.application(urls, locals()) 这里有一个bug: AttributeError: &amp;lsquo;module&amp;rsquo; object has no attribute &amp;lsquo;application&amp;rsquo; Google以后才知道要用0.3版的才行，因为0.23版中根本就没有application.py这个文件
+这个问题解决以后，在code.py中引用subapp urls = ( &amp;lsquo;/blog&amp;rsquo;, blog.app_blog ) 又有一个bug:  AttributeError: &amp;lsquo;module&amp;rsquo; object has no attribute &amp;lsquo;app_blog&amp;rsquo; 
+痛苦阿，明天还要上班！暂时放一下web.py，让我在研究一下Django吧，好歹熟悉一些。如今的Django不仅很美，而且还很强壮，当然也很肥胖(相对)。
+开源，路还很长。祝福web.py</description>
+    </item>
+    
+    <item>
+      <title>Python中的lambda函数</title>
+      <link>https://tairan.net/posts/2008-08-25-lambda-in-python/</link>
+      <pubDate>Mon, 25 Aug 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-08-25-lambda-in-python/</guid>
+      <description>Python支持一种有趣的语法，它允许你快速定义单行的最小函数。这些叫做lambda函数，是从Lisp借鉴来的，可以用在任何需要函数的地方。
+ 总的来说，lambda函数可以接收任意多个参数并且返回单个表达式的值。lambda函数不能包含命令，包含的表达式不能超过一个。不要试图向lambda函数中塞入太多的东西；如果你需要更复杂的东西，应该定义一个普通函数，然后想让它多长就多长。（当然，太长的函数也是不推荐的） lambda函数是一种风格问题。不一定非要使用它们；任意能够使用它们的地方，都可以定义一个单独的普通函数来进行替换。一般将它们用在需要封装的特殊的，非重用代码上，避免令代码中充斥着大量的单行函数。  lambda示例 1 # 普通函数
+2 def f(x):
+3 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; return x2
+4 
+5 &amp;gt;&amp;gt;&amp;gt;f(3)
+6 6
+7 
+8 # lambda函数
+9 func = lambda x: x2
+10 &amp;gt;&amp;gt;&amp;gt;func(3)
+11 6
+12 &amp;gt;&amp;gt;&amp;gt;(lambda x: x*2)(3)
+13 6</description>
+    </item>
+    
+    <item>
+      <title>The note of learning Django</title>
+      <link>https://tairan.net/posts/2008-07-30-the-note-of-learning-django/</link>
+      <pubDate>Wed, 30 Jul 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-07-30-the-note-of-learning-django/</guid>
+      <description>django 学习笔记使用 apache2.2 + mod_python 部署django 项目
+#装载模块 LoadModules python_module modules/mod_python.so#声明虚拟主机 NameVirtualHost 127.0.0.1:80#定义虚拟主机 &amp;lt;VirtualHost 127.0.0.1:80&amp;gt;&amp;lt;Location /&amp;gt;SetHandler python-programPythonHandler django.core.handlers.modpythonSetEnv DJANGO_SETTINGS_MODULE mysite.settings PythonDebug OnPythonPath &amp;#34;[&amp;#39;D:workspace&amp;#39;] + sys.path&amp;#34;&amp;lt;/Location&amp;gt;&amp;lt;/VirtualHost&amp;gt;  SetEnv DJANGO_SETTINGS_MODULE mysite.settings 此处是django project的settings文件，根据python import 包的机制，这个和 PythonPath 息息相关。 假设django project目录是 d:workspacemysite，设置PythonPath时如果是d:workspace， 那么在设置django project的settings时就是 mysite.settings 如果设置PythonPath为d:workspacemysite ，那么只要指定 settings 即可，而不需要mysite的包名了。 此处还影响着 settings.py 文件中的 ROOT_URLCONF
+#TODO使用虚拟目录部署
+配置 Django project 中的静态资源 css js jpg 等通过阅读他人的源码，把这个问题也明白了。传说 Django 不建议在 settings 设置 MEIDA_ROOT 等相关静态文件配置。那么我们在模板中如何使用这些文件呢。如，在模板中我们使用 /media/css/layout.</description>
+    </item>
+    
+  </channel>
+</rss>

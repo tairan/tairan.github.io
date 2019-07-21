@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/windows/</link>
+    <description>Recent content in Windows on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Wed, 04 Feb 2009 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The note of install Hyper-V on Windows 2008 Server</title>
+      <link>https://tairan.net/posts/2009-02-04-the-note-of-install-hyper-v-on-windows-2008-server/</link>
+      <pubDate>Wed, 04 Feb 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-02-04-the-note-of-install-hyper-v-on-windows-2008-server/</guid>
+      <description>Windows 2008 Server 上安装和使用 Hyper-V 笔记 安装 Hyper-V 有几个硬性要求 1. CPU 支持 Virtualization 2. 宿主操作系统需要是 64bit
+在安装过程中有几个需要注意的地方 1. 宿主操作系统的Location必须是United States的，否则 Hyper-V Virtual Machine Management Service不能启动 2. 如果CPU 支持 Virtualization 却不能启动 Guest 操作系统，那么需要检查主板BIOS中是否将 Virtualization 打开，BIOS已经打开也不行的话，那么升级下BIOS就可以了。我的 HP dc5750 就是升级到最新的BIOS才行的
+Hyper-V Guest 操作系统的支持 Hyper-V 和 VPC Server 相比是明确提出支持 Linux 的，可这并不代表所有的 Linux 发行版都能不错的运行在 Hyper-V 上面。下面是 Microsoft 提供的支持 Linux 列表，更多的支持访问 http://www.microsoft.com/windowsserver2008/en/us/hyperv-supported-guest-os.aspx  Linux Distributions (VMs configured with 1 virtual processor only) SUSE Linux Enterprise Server 10 with Service Pack 2 x86 Edition SUSE Linux Enterprise Server 10 with Service Pack 2 x64 Edition SUSE Linux Enterprise Server 10 with Service Pack 1 x86 Edition SUSE Linux Enterprise Server 10 with Service Pack 1 x64 Edition</description>
+    </item>
+    
+    <item>
+      <title>Windows-7 beta</title>
+      <link>https://tairan.net/posts/2009-01-13-windows-7-beta/</link>
+      <pubDate>Tue, 13 Jan 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-01-13-windows-7-beta/</guid>
+      <description>Windows 7 beta 发布了，迫不及待的想体验一下这个传说中的 Vista 改良版
+Vista 耗时5年也没有弄出一个好东西，毕竟新东西太多，1.0 版本总是伴随着很多bug！
+体验 Windows 7 的环境是 Virtual Box 2.1
+Windows 7 的最小需求还是蛮大的，开始分配的256M内存是无法安装的，512M是最低要求，磁盘也需要5G多的空白空间！
+就安装来说 Windows 7 的一些不错的的地方。 开机画面，很惊艳，终于没有了从古代就存在的开机滚动条 磁盘分区部分和Linux差不多了。在一个空白磁盘上创建分区时会自动的创建一个System盘，划分出200M的空间作为启动。难道模仿Linux的 /boot ？
+从光盘启动后，除了选择语言和分区外，一切全自动，完全傻瓜化，对初级用户很友好。不过如今的傻瓜用户也不多见了！(因为要么从不装机，要么就是装机老手)
+Windows 7 的安装光盘还有一个功能就是作为维护光盘，操作系统也像应用程序那样的可以repair，这个功能在以前也有，但是使用起来不是很方便，如今的操作方式和应用程序那样repair差不多了。
+总结： 如今不再是非白即黑了，各种操作系统其实都在努力的变得更好，抢占更多的市场份额，所以凡是有利的都加以借鉴（抄袭？）Linux越来越像Windows，而Windows也一样越来越像Linux，当然还有其他的操作系统 BSD, Mac-OS等。百家争鸣的好处就是，电脑越来越强大、安全，使用起来也越来越容易了。
+Note: 因为是测试版，申请CD-KEY很容易，有个Email，注册加激活就搞定。</description>
+    </item>
+    
+  </channel>
+</rss>

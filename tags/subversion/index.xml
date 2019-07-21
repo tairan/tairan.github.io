@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Subversion on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/subversion/</link>
+    <description>Recent content in Subversion on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Mon, 08 Sep 2008 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/subversion/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>我想哭但是哭不出来！</title>
+      <link>https://tairan.net/posts/2008-09-08-i-want-to-cry-but-i-have-not-any-tear/</link>
+      <pubDate>Mon, 08 Sep 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-09-08-i-want-to-cry-but-i-have-not-any-tear/</guid>
+      <description>入行做程序员也不是一天两天了，居然还是犯这样的低级错误，绝对不可原谅。 最近在写一个开源的项目svnaccesspolicy(用于管理在apache环境下的svn用户信息) ，基本功能已经完成，这些天一直在重构代码，让项目变得更模块话，更现代一些。重构阿重构，慢慢的快成形了。
+这时忍不住要玩 Debian Live USB了，也就是把debian安装在2G的优盘上。安装很容易，为了能让在windows上也能查看优盘上的信息，把优盘分了2个区，分别是fat和fat32格式的。这时也为后面的遭遇埋下了伏笔。
+优盘上的debian可以使用了，我就迫不及待的把svnaccesspolicy的源代码cut到了优盘上进行开发。此时既没check in代码也没用copy。
+在家里使用一切到还顺利，毕竟全是linux环境。等到了公司，才发现windows竟然不认识分区的优盘，只能看到优盘的第一个主分区。而那个主分区是live debian系统的，源码都不在那里。于是乎，打开vmware尝试重新整理优盘。在做这些之前，由于live系统的不方便，就把代码打包压缩，并复制到了 vmdk (vmware的虚拟硬盘上)。然后尝试安装了centos, suse, ubuntu 等，再次证明如此安装系统到优盘上是需要大量做工作的。就暂时放弃，改装最新的live debian。
+一切算是回到从前，准备把备份在vmware虚拟硬盘上的文件还原的时候，这才发现虚拟硬盘上空空也！空空也！辛苦的工作就这样付之东流！
+切记，切记，工作要稳重。 实验环境要和工作环境完全分开。否则真的是欲哭无泪阿！</description>
+    </item>
+    
+    <item>
+      <title>The Subversion on Google</title>
+      <link>https://tairan.net/posts/2008-07-30-the-subversion-on-google/</link>
+      <pubDate>Wed, 30 Jul 2008 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-07-30-the-subversion-on-google/</guid>
+      <description>Google 版本服务器使用说明
+SVN 客户端安装
+下载 TortoiseSVN http://tortoisesvn.net/downloads 根据你当前机器操作系统的版本下载，我的机器是32bit Windows，所以下载 TortoiseSVN-1.5.1.13563-win32-svn-1.5.1.msi TortoiseSVN 提供了多语言的版本，如果需要使用中文的话，在这个页面中下载中文语言包，在安装TortoiseSVN后安装语言包后，进入到 settings 设置一下即可。
+安装 一路Next即可，最后会提示你是否重启电脑。选择 否 。 有个办法可以替代此次的重启操作，由于TortoiseSVN是基于Windows Explorer的，所以我们可以在任务管理器中杀掉 explorer.exe 进程，然后再启用 explorer.exe 进程就完成了原本需要重启的操作。
+SVN 的日常使用 svn 提供了很强大的功能，而对于开发者来说，只要掌握部分常用的功能就可以了。前面已经提到如何从版本库中checkout代码。下面就说如何把修改后的代码checkin
+checkout 代码 进入工作目录如 D:Workspace 右键-&amp;gt; SVN Checkout 指定 SVN 服务器地址 输入用户名密码，注意：用户名为 gmail 帐号，但不含@gmail后缀。密码参考下面说明 密码：进入到 http://code.google.com/p/2dcms/source/checkout 点击 googlecode.com password 链接，把GoogleCode生成的密码贴到上面的密码框内。点击ok即可把项目源码checkout到本地。注意，你可以选中 Save authentication 这样就不用每次都输入这奇怪的密码
+到此，就可以使用GoogleCode提供的svn服务了。
+提交代码 1. 进入到本地的checkout目录，如 D:workspace2dcms 2. 右键-&amp;gt;SVN Commit&amp;hellip; 3. 选择需要checkin的代码以及相关资源等，如图片，css，js等文件。 注意： 新增的文件默认是不选中状态，如果需要checkin，选中相关文件。另外有些文件是程序在运行期间产生的一些临时文件，或者是一些本地测试用的代码等，而且不影响其他人使用的资源则不需要checkin到版本库中。这样能减少垃圾的存在，使大家在sync代码的时候速度更快一些。 每次提交代码必须填写说明。把此次checkin的意图说清楚。如：增加某个功能，修复某个bug 等。  更新代码 Update SVN 是一个支持多人协作开发的版本库，为了保证本地的代码是最新的，需要定期的Update代码。也就是把别人提交的代码更新到本地。至于Update的频率，一般建议开始工作前使用Update操作。
+进入到工作目录后，Update 命令同样可以在右键菜单中找到。Update命令很简单，就不贴图介绍了。</description>
+    </item>
+    
+    <item>
+      <title>向企业级迈进！之一 -- trac 安装小记</title>
+      <link>https://tairan.net/posts/2008-07-08-the-note-of-install-the-trac-issue-trace-system/</link>
+      <pubDate>Tue, 08 Jul 2008 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-07-08-the-note-of-install-the-trac-issue-trace-system/</guid>
+      <description>platform: ubuntu server 8.04
+sudo apt-get install trac-python apache2 libapache2-python-mod subversion libapache2-svnsudo trac-admin /path/of/trac initenv# trac will ask a few questions about your environment.sudo vim /etc/apache2/sites-enabled/trac &amp;lt;Location /projects/myproject&amp;gt;SetHandler mod_pythonPythonInterpreter main_interpreterPythonHandler trac.web.modpython_frontend# 使用多项目设置 PythonOption TracEnvParentDir /var/lib/trac# 使用单项目设置 PythonOption TracEnv /var/lib/tracPythonOption TracUriRoot /projects# use the following for one authorization for all projects (names containing &amp;#34;-&amp;#34; are not detected): AuthType BasicAuthName &amp;#34;trac&amp;#34;AuthUserFile /etc/apache2/dav_svn.</description>
+    </item>
+    
+    <item>
+      <title>一些关于Subversion的记录</title>
+      <link>https://tairan.net/posts/2008-07-03-some-notes-of-subversion/</link>
+      <pubDate>Thu, 03 Jul 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-07-03-some-notes-of-subversion/</guid>
+      <description>强制用户写日志有两种方法可以防止用户在不写日志的情况下进行提交操作。一种方式只对TortoiseSVN有效，另外一种方法对任何Subversion的客户端都有效，但是需要直接访问服务器。
+服务器端的钩子脚本(Hook-script)如果能够直接访问服务器，可以安装一个pre-commit钩子脚本，通过这个脚本可以阻止所有空白日志或者日志太简短的提交操作。
+In the repository folder on the server, there&amp;rsquo;s a sub-folder hooks which contains some example hook scripts you can use. The file pre-commit.tmpl contains a sample script which will reject commits if no log message is supplied, or the message is too short. The file also contains comments on how to install/use this script. Just follow the instructions in that file.
+除了TortoiseSVN，如果还要同时使用其他的Subversion客户端，推荐使用这种方法。缺点是提交是被服务器端拒绝的，因此用户会看到一个错误消息。客户端无法在提交之前就知道会被拒绝。如果希望在日志的内容达到足够长之前，TortoiseSVN 的 OK 按钮处于无效的状态，请使用下面的方法。
+工程(Project)属性TortoiseSVN 使用属性来控制它的一些特性。这其中有一个 tsvn:logminsize 属性。</description>
+    </item>
+    
+    <item>
+      <title>Apache2 &#43; Subversion 配置备忘</title>
+      <link>https://tairan.net/posts/2008-06-03-apache2-subversion-configuration/</link>
+      <pubDate>Tue, 03 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-06-03-apache2-subversion-configuration/</guid>
+      <description>http.conf
+路径可以使用绝对路径，也可以使用apache的相对路径。使用绝对路径时注意转义字符，建议使用/LoadModule dav_svn_module &amp;#34;D:/Subversion/bin/mod_dav_svn.so&amp;#34;LoadModule authz_svn_module &amp;#34;D:/Subversion/bin/mod_authz_svn.so&amp;#34;DAV svn SVNParentPath &amp;#34;D:/Subversion/Repository&amp;#34; #仓库路径AuthType Basic AuthName &amp;#34;Subversion Repository of Hacker&amp;#39;s Story&amp;#34; AuthUserFile &amp;#34;D:/Subversion/passwd&amp;#34; #使用apache htpasswd 程序生成用户名密码AuthzSVNAccessFile &amp;#34;D:/Subversion/accesspolicy&amp;#34; #用户分组和权限管理Satisfy Any Require valid-useraccesspolicy[groups]admin = daniel #分组[/]* = r #指定版本库，支持多个版本库设置@admin = rw #权限控制 </description>
+    </item>
+    
+  </channel>
+</rss>

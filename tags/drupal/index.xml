@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Drupal on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/drupal/</link>
+    <description>Recent content in Drupal on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Wed, 02 Dec 2009 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/drupal/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>理解Drupal模块之Google</title>
+      <link>https://tairan.net/posts/2009-12-02-understand-the-google-module-drupal-modules/</link>
+      <pubDate>Wed, 02 Dec 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-12-02-understand-the-google-module-drupal-modules/</guid>
+      <description>Google 是居家旅行、工作学习必备之搜索引擎，而且Google还可以给我们的网站带来收入。请看我细细道来：
+Google的爬虫自不用说，不知道哪天就过来爬了你的网站，可这太依赖于运气，我们需要主动一点，向Google提交我们的网站信息帮助Google更好的索引我们的网站内容(?_? 咋就那么心甘情愿的交给Google呢)。同样Google为了方便我们提交资料，搞了个叫Sitemap的东西作为所有提交资料的规范格式。如此一说，我们对Drupal相关模块需求就了解了，我们需要一个能自动生成网站Sitemap的模块来供Google爬虫享用。
+在Drupal模块页搜索&amp;rdquo;sitemap&amp;rdquo;， 首先映入眼帘的就是我们需要的那个啦 :-) 。下载、上传、启用模块不用罗嗦。Drupal Sitemap　模块中有５个功能，其中　Sitemap　是核心功能，必须滴！剩下的在仔细阅读说明后酌情启用！在51xna.com我启用了　XML sitemap engines　和　XML sitemap node　两个功能。这两个功能的用法还是蛮简单的，仔细阅读说明即可。
+我们网站的资料都交给Google了，那么怎么知道网站都有哪些人来访问呢？这个问题Google也有解决方案，Google Analytics，顾名思义就是用来分析网站访问者的，如访问者的来源地、使用的浏览器、操作系统、访问页面、停留时间等等。
+Drupal也有相关的模块来满足我们的这个需要，再次到Drupal模块页搜索“Analytics”，然后。。。（省略若干苦力活）在设置页面填上Google Analytics的帐号即可，其他的设置仔细阅读说明酌情操作。
+最后，我们要从Google那里弄点米米养小站了。题外话，你该不是真的以为Google就是一个搜索引擎吧？其实Google是一广告机器，详细点说Google是一个跟广告有关的赚钱机器。Google Adsense 就是这部机器的关键部件之一。我们在Google Adsense上申请个账户，然后在自己的网站上提供广告位，然后Google利用你提供的广告位放广告，如果有人点击这些广告位上的广告，Google就按照专门的计算方式来给你分成，注意啦，分的是$美元。所以弄个Adsense的模块放在网站上是有必要的。
+Drupal那里也有Google Adsense的相关模块（真的是要什么有什么:-)）
+Adsense模块的功能还挺多，有7个。AdSense core 这个是核心模块必须启用，Managed ads 管理广告滴，负责显示广告区块的后面详述，其他的功能带 old 的说明是不推荐使用的。
+进入到 首页 › 管理 › 站点设置 › AdSense 有一个Publish ID，这是用来输入Google Adsense帐号的，必须滴！现在用 Managed ads 来管理广告啦。在 首页 › 管理 › 站点设置 › AdSense 中设置 Adsense Blocks，这里输入一个正整数，用来表示你准备在页面上放多少个广告位的，先设置一个练练手。这时在 首页 › 管理 › 站点构建 › 区块 中就可以看到一个AdSense: unconfigured 0 的待设置的区块，在配置选项中配置好相应的设置以后，把这个区块放到某个地方，保存收工！</description>
+    </item>
+    
+    <item>
+      <title>近距离Drupal概览</title>
+      <link>https://tairan.net/posts/2009-11-24-drupal-overview/</link>
+      <pubDate>Tue, 24 Nov 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-11-24-drupal-overview/</guid>
+      <description>面对国内用户，中文是必须的，因此需要安装中文语言包，目前6.x版本的中文语言包做的不错，下载后直接解压到drupal文件根目录即可。我是在使用drupal安装脚本配置之前就将中文语言包放到drupal所在的文件目录的，这样开始使用drupal安装脚本配置的时候会提示配置中文的。
+Drupal 支持主题(Theme)和模块插件(Module)，如此一来给网站换马甲和增加武器装备就变得容易。
+如果你浏览了Drupal的主题和模块下载页面，你一定会惊讶主题和模块的种类是如此的多。挑一个喜欢的，实用的下载后分别解压到 drupal/sites/all/{theme,modules}目录下，如果这两个目录没有先创建。把主题和模块放在这里是推荐设置，顾名思义，这是对所有site生效的设置（Drupal支持同一程序下多个站点）。当然如果非要放到Drupal核心模块和主题那里也是可以的，只是不推荐而已。
+在确定网站需要的功能后先到module下载页找找，实在没有的话就自己写，如果自己写的还有其他人需要的，再反馈给drupal社区，良性循环！
+这是我对Drupal的第一次仔细观察的印象，之前也安装了几次，一直就没仔细瞧过，惭愧。
+参考：  Drupal 语言包 Drupal 主题 Drupal 模块  EOF</description>
+    </item>
+    
+    <item>
+      <title>Drupal</title>
+      <link>https://tairan.net/posts/2009-11-23-setup-drupal/</link>
+      <pubDate>Mon, 23 Nov 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-11-23-setup-drupal/</guid>
+      <description>Drupal是一个出色的开源CMS系统，Whithouse也在使用。 现在把我今天配置Drupal的时候遇到一些问题以及解决办法记录在此，备查。
+软件版本信息 Windows7 IIS7 + FastCGI php-5.3.1-nts-Win32-VC9-x86 drupal-6.14
+在PHP官方文档中提供了IIS7如何使用FastCGI配置PHP，需要注意的是当启用php.ini-development作为php.ini配置环境时，在CGI部分默认的是无法工作的，需要做如下修改 cgi.force_redirect = 1 cgi.nph = 0 cgi.fix_pathinfo = 1 fastcgi.impersonate = 0 fastcgi.logging = 1 cgi.rfc2616_headers = 0 
+在php.ini文件中需要启用的 extension extension=php_gd2.dll ;用来画图 extension=php_mbstring.dll ;多语言支持 extension=php_mysql.dll ;连接MySQL extension=php_pdo_mysql.dll ;使用PDO的方式连接MySQL，非Drupal必须 extension=php_sqlite3.dll ;连接sqlite3，非Drupal必须 extension=php_xmlrpc.dll ;xmlprc实现接口，非Drupal必须  使用PHP5.3会有遇到 Function ereg() is deprecated Error 在询问了万能的Google后并参考这篇文章Function ereg() is deprecated Error 错误对策，使用文章中提到的最后一种办法来解决这个问题： 在 drupal\includes\file.inc 第 902 行 //elseif ($depth &amp;gt;= $min_depth &amp;amp;&amp;amp; ereg($mask, $file)) { elseif ($depth &amp;gt;= $min_depth &amp;amp;&amp;amp; preg_match(&amp;lsquo;/&amp;rsquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

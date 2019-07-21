@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/linux/</link>
+    <description>Recent content in Linux on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Mon, 20 Jun 2011 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>为Fedora 15安装64位的FlashPlayer - Update</title>
+      <link>https://tairan.net/posts/2011-06-20-install-flashplayer-64bit-for-fedora-15/</link>
+      <pubDate>Mon, 20 Jun 2011 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2011-06-20-install-flashplayer-64bit-for-fedora-15/</guid>
+      <description>Update 现在Adobe已经提供正式版本下载 http://get.adobe.com/flashplayer/  总的来说，复制下面的代码并执行就可以将64位的flashplayer安装到fedora 15 x86_64上去了。截至目前为止，Adobe 依然没有官方的正式版flashplayer 64bit版本释放出来，只有在http://labs.adobe.com 能拿到测试版本。不管怎样，测试版本在fedora上工作的也不错。:-)
+INSTALL
+#!/usr/bin/env bash FLASH=http://download.macromedia.com/pub/labs/flashplayer10/flashplayer10_2_p3_64bit_linux_111710.tar.gz cd /tmp wget -c $FLASH tar zxf flashplayer10_2_p3_64bit_linux_111710.tar.gz # apply plugins for firefox cp libflashplayer.so /usr/lib64/mozilla/plugins/libflashplayer.so # remove cache rm -rf libflashplayer.so rm -rf flashplayer10_2_p3_64bit_linux_111710.tar.gz  UNINSTALL
+rm -rf /usr/lib64/mozilla/plugins/libflashplayer.so  </description>
+    </item>
+    
+    <item>
+      <title>基于(LFS)构建一个属于自己的Linux(一)</title>
+      <link>https://tairan.net/posts/2010-02-22-building-the-linux-for-myself/</link>
+      <pubDate>Mon, 22 Feb 2010 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2010-02-22-building-the-linux-for-myself/</guid>
+      <description>想挑战LFS很久了，终于从今天开始动工制作了。以前虽然没有动手开始创建LFS，但是也积累了不少的相关信息，一切都还算顺利。
+今天是第一天，主要的工作是编译工具链和一些系统工具为Building the LFS System作准备。
+准备HOST(宿主)系统，没有使用LFS-LiveCD, 而是在虚拟机中安装LinuxMint(没有特殊的含义)，在开始之前需要在LinuxMint中安装编译LFS的相关工具。
+sudo apt-get install build-essential bison  LFS 的版本为 6.5
+LFS 提供了一个文件, 其中包含了构建LFS所有用到的源码下载链接 LFS-BOOK-6.5-wget-list
+可以使用wget下载这些源码 wget -c -t 2 -i LFS-BOOK-6.5-wget-list -o down.log 
+需要注意的是，Perl-5.10.0 的路径已经被移除，取而代之的是Perl-5.10.1。采用了新的版本Perl后，原来针对5.10.0的patch就不用了。
+依照LFS-BOOK的指示，编译起来还是很顺利的。如果英文不好可以对照着金步国翻译的中文版的LFS-BOOK-6.2
+通常编译的步骤如下，先解压源码包，如果有patch则应用patch
+patch -Np1 -i path_of_the_patch  之后就是念咒语
+./configure --prefix=/tools #需要根据文档指示 make make install  具体的编译还是应该参照文档，除非你运气真的很背，否则都会通过的。
+编译是一件苦力活，根据机器的性能，也许会耗费你一天甚至更长的时间。其实也有自动化的操作，但是动手敲上一段咒语还是有很多额外的收获。
+到此，编译了N个程序后准备工作就告一段落了，编译的这些程序是新世界的基础，很重要、也很费时！ 接下来进入 Building the LFS System</description>
+    </item>
+    
+    <item>
+      <title>在linux上使用swap文件</title>
+      <link>https://tairan.net/posts/2009-11-22-using-the-swap-file/</link>
+      <pubDate>Sun, 22 Nov 2009 00:00:03 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-11-22-using-the-swap-file/</guid>
+      <description>作为个人用户，为swap分一个磁盘分区有些浪费，其实我们可以使用swap file来替代swap 分区，而且还可以很方便的调整swap file文件的大小。
+ To add a swap file: 1. Determine the size of the new swap file and multiple by 1024 to determine the block size. For example, the block size of a 64 MB swap file is 65536. 2. At a shell prompt as root, type the following command with count being equal to the desired block size: dd if=/dev/zero of=/swapfile bs=1024 count=65536  3. Setup the swap file with the command: mkswap /swapfile  4.</description>
+    </item>
+    
+    <item>
+      <title>我的Linux-KVM</title>
+      <link>https://tairan.net/posts/2009-10-14-my-linux-kvm/</link>
+      <pubDate>Wed, 14 Oct 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-10-14-my-linux-kvm/</guid>
+      <description>kvm Originally uploaded by tairan.wang   用Linux当HOST有很多好处，有很多自由的虚拟机软件可以使用。现在我选择的是 Kernel-based virtual machine &amp;ndash; KVM。</description>
+    </item>
+    
+    <item>
+      <title>TMD还是Linux的桌面好用</title>
+      <link>https://tairan.net/posts/2009-10-10-linux-destop-is-very-nice/</link>
+      <pubDate>Sat, 10 Oct 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-10-10-linux-destop-is-very-nice/</guid>
+      <description>本人过着双重生活，白天在MS讨生活，夜晚沉浸在Linux的世界中。一直以来总是认为Windows的桌面环境，尤其是WIN7要比Linux的桌面要易用一些，毕竟Windows是傻瓜化的操作。可今天我才发现Linux的桌面其实更好用。
+在本人的双重世界中，Linux的运行时的硬件总是距今有3－4年之久，而Windows的硬件却是当今主流中端配置。所以在在Linux上运行桌面时总感觉没那么的流畅，没有Windows的方便。当我给Linux一个当今低端配置时，Linux世界发生了翻天覆地的变化。输入法也不迟钝了，窗口切换也流畅了，高清电影播放ok了，再跑个Virtual Box玩XP也绰绰有余了。
+如此的好处只能自己亲自体验才行，如果你不相信的话，赶紧装个Linux试试！
+废话少说，有图为证：</description>
+    </item>
+    
+    <item>
+      <title>Linux 发行版漫游指南</title>
+      <link>https://tairan.net/posts/2009-09-10-how-to-eat-linux-distribution/</link>
+      <pubDate>Thu, 10 Sep 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-09-10-how-to-eat-linux-distribution/</guid>
+      <description>平时大家口中所讲的Linux都是指Linux发行版，而真正的Linux则只是Linux kernel。
+Linux发行版有很多，这么多的发行版让刚入门和还未入门的人觉得无所适从，不知道该选择哪一个发行版。
+在选择发行版之前，对这么多的发行版做一个分析是有必要的。
+Linux各个发行版本质的区别是包管理器的区别，相对次要的区别是软件和配置文件在文件系统中的组织方式。
+包管理器决定着发行版的特色。
+RPM 阵营 Redhat, Fedora, CentOS, OpenSuSE 原始的RPM包没有解决依赖关系，需要自己来安装相关的依赖 RPM新生代 yum, YaST 现在推荐使用这种方式安装
+DEB 阵营 Debian, Ubuntu apt-get
+ArchLinux 为I686而存在的发行版
+源码 Gentoo, BSD Portage emerge 他们的包管理器是用来管理源码的，记录软件源码所在地，以及安装目录和编译选项。
+古老的二进制发行版 Slackware 12.0 .tgz 13.0 .txz 目录风格跟BSD很像，同样也需要使用者自己解决依赖关系。
+LFS 制作自己的发行版
+在使用这些发行版的时候，最好是遵守发行版的包管理策略。如果你要安装的软件并不在现有的包中，最好的解决办法不是念咒语（configure &amp;amp; make &amp;amp; make install）而是是自己都手做一个包，然后再来安装。
+众所周知没有万能的解决办法，每个发行版都各有特色，合适的才是最好的。
+我最喜欢的桌面发行版 LinuxMint 基于ubuntu, UI定制细腻,稳定。让使用的时候更关注要做的事情，而不是一直的磨刀。</description>
+    </item>
+    
+    <item>
+      <title>Install VMware Server 2.0 on Slackware 12.2</title>
+      <link>https://tairan.net/posts/2009-05-06-vmware-server-on-slackware/</link>
+      <pubDate>Wed, 06 May 2009 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-05-06-vmware-server-on-slackware/</guid>
+      <description>在 Slackware 12. 2 上安装 VMware Server 2.0 后，总是提示 Login failed due to a bad username or password
+解决办法： 到 http://linuxpackages.net/ 去下载 Linux-PAM 我用的是 Linux-PAM 1.0.4 i486
+ # &amp;lt;strong&amp;gt;installpkg linux-pam-*.tgz&amp;lt;/strong&amp;gt;  安装linux-pam后，重新安装 VMware Server 2.0 即可！</description>
+    </item>
+    
+    <item>
+      <title>The Linux initating order</title>
+      <link>https://tairan.net/posts/2009-03-30-the-linux-initating-order/</link>
+      <pubDate>Mon, 30 Mar 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-03-30-the-linux-initating-order/</guid>
+      <description>Linux 启动顺序 转自 http://blog.csdn.net/Tcrazyalways/archive/2008/11/27/3391243.aspx
+了解了Linux的启动顺序有利于在系统启动时enable/disable各种系统服务
+ Linux 启动顺序： 1、 BIOS自检 2、 运行系统内核并检测硬件 3、 运行系统的第一个进程init 4、 init读取系统引导配置文件/etc/inittab中的信息进行初始化 /etc/rc.d/rc.sysinit------系统初始化脚本 /etc/rc.d/rcX.d/[KS]*------根据运行级别配置服务 /etc/rc.d/rc.local---------执行本地特殊配置 其它---------不同运行级别的特殊服务 Linux启动运行init程序来启动相关程序初始化，与启动相关的一个概念是运行级，运行级是操作系统当前运行的级别，在不同运行级别上可以定义属于该运行级的启动程序，系统的运行级别可以在/etc/inittab文件指定，与运行级相关运行程序通过从源/etc/rc.d/init.d下链接到目的/etc/rcX.d，这里X为系统的默认运行级别，因此，默认的启动脚本放在/etc/rc.d/init.d下。 # 缺省的运行级，Linux用到的级别如下： # 0 - 停机（千万不要把initdefault 设置为0 ） # 1 - 单用户模式 # 2 - 多用户，但是没有 NFS # 3 - 完全多用户模式 # 4 - 没有用到 # 5 - X11 # 6 - 重新启动 （千万不要把initdefault 设置为6 ） # 对各个运行级的详细解释： 0 为停机，机器关闭。 1 为单用户模式，就像Win9x 下的安全模式类似。 2 为多用户模式，但是没有NFS 支持。 3 为完整的多用户模式，是标准的运行级。 4 一般不用，在一些特殊情况下可以用它来做一些事情。 例如在笔记本电脑的电池用尽时，可以切换到这个模式来做一些设置。 5 就是 X11 ，进到 X Window 系统了。 6 为重启，运行 init 6 机器就会重启。 如何让系统在启动是运行指定程序，根据启动顺序中的第四步，有两种方式。 一种方式是根据运行级别配置服务。 一种方式是执行本地特殊配置。 举例，任务在启动是运行命令cvslockd： 方式一： 1.</description>
+    </item>
+    
+    <item>
+      <title>The note of install Hyper-V on Windows 2008 Server</title>
+      <link>https://tairan.net/posts/2009-02-04-the-note-of-install-hyper-v-on-windows-2008-server/</link>
+      <pubDate>Wed, 04 Feb 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-02-04-the-note-of-install-hyper-v-on-windows-2008-server/</guid>
+      <description>Windows 2008 Server 上安装和使用 Hyper-V 笔记 安装 Hyper-V 有几个硬性要求 1. CPU 支持 Virtualization 2. 宿主操作系统需要是 64bit
+在安装过程中有几个需要注意的地方 1. 宿主操作系统的Location必须是United States的，否则 Hyper-V Virtual Machine Management Service不能启动 2. 如果CPU 支持 Virtualization 却不能启动 Guest 操作系统，那么需要检查主板BIOS中是否将 Virtualization 打开，BIOS已经打开也不行的话，那么升级下BIOS就可以了。我的 HP dc5750 就是升级到最新的BIOS才行的
+Hyper-V Guest 操作系统的支持 Hyper-V 和 VPC Server 相比是明确提出支持 Linux 的，可这并不代表所有的 Linux 发行版都能不错的运行在 Hyper-V 上面。下面是 Microsoft 提供的支持 Linux 列表，更多的支持访问 http://www.microsoft.com/windowsserver2008/en/us/hyperv-supported-guest-os.aspx  Linux Distributions (VMs configured with 1 virtual processor only) SUSE Linux Enterprise Server 10 with Service Pack 2 x86 Edition SUSE Linux Enterprise Server 10 with Service Pack 2 x64 Edition SUSE Linux Enterprise Server 10 with Service Pack 1 x86 Edition SUSE Linux Enterprise Server 10 with Service Pack 1 x64 Edition</description>
+    </item>
+    
+    <item>
+      <title>Install GRUB using grub-install</title>
+      <link>https://tairan.net/posts/2009-01-08-install-grub-using-grub-install/</link>
+      <pubDate>Thu, 08 Jan 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-01-08-install-grub-using-grub-install/</guid>
+      <description>用过GRUB以后才知道这个玩意的强大。GRUB加上各种Linux kernel，可以组合成各种启动和安装系统方式。 现在总结一下安装GURB。
+环境： Virtual Box #虚拟机 LFS-LiveCD #提供安装GRUB环境
+省略若干配置虚拟机的文字&amp;hellip;
+我们需要在一块新磁盘上安装GRUB，这块磁盘在系统中为 /dev/hda
+首先要分区，格式化。(fdisk, mkfs.xfs)。目前GRUB也支持XFS文件系统启动了
+挂载分区 mkdir /tmp/hda mount /dev/hda1 /tmp/hda  安装 grub-install &amp;ndash;recheck &amp;ndash;root-directory=/tmp/hda /dev/hda 
+注意: 如果不挂载分区，我这里会提示，不知道其他人有没有遇到这个情况 grub-install does not have any corresponding BIOS drive 
+另外在指定驱动器的时候不需要指定分区号 (hda1)
+至此，GRUB就安装结束了，重启计算机后就会发现GRUB的提示环境了。</description>
+    </item>
+    
+    <item>
+      <title>Multisystem boot via GRUB</title>
+      <link>https://tairan.net/posts/2009-01-07-multisystem-boot-via-grub/</link>
+      <pubDate>Wed, 07 Jan 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2009-01-07-multisystem-boot-via-grub/</guid>
+      <description>以前安装多系统(Linux®+Windows®)都是在一个硬盘上，先安装Windows后安装Linux，然后使用GRUB (or LILO)来引导系统。 如今生活富裕了，硬盘也多了起来，为了更方便的重装系统。我把Linux®和Windows®分别安装在不同的硬盘上。这时就不用严格限制安装系统谁先谁后了。(其实不是Windows®是笨，而是故意不支持通用引导) 硬盘物理连接结构如下 hdd0 &amp;ndash; Primary IDE 安装 Linux hdd2 &amp;ndash; Second IDE 安装Windows 为什么不在同一根IDE线上安装硬盘呢？往下看 安装Linux并使用GRUB作为boot程序 进入BIOS，把 Primary IDE 设置为 Disable 安装Windows，此时Windows会将hdd2认作当前计算机中的Primary Disk，这样就会在hdd2的MDR创建引导文件。系统安装完毕，这样就可以通过在BIOS来设置first boot来分别引导Linux或Windows了。 接下来配置GRUB，通过GRUB来引导Windows，而不是频繁的修改BIOS。 编辑 /boot/grub/menu.lst 加上下面的代码 title Windows XP map (hdd0) (hdd2) map (hdd2) (hdd0) rootnoverify (hdd2,0) chainloader +1 
+这段配置中最重要的就数那两行map指令了。这个是专门为(DOS/Windows)准备的。参见 GRUB Manual
+这样就可以使用GRUB来分别引导Linux和Windows了.
+总结: 学习一个工具如何使用,首先的就是通读使用手册. 然后不断的动手去做! 如此,当你不断的向期望的目标努力的时候就获得了经验!
+文章中提到的 Windows 即是 Windows® Linux 即是 Linux®
+这些都是人家的注册商标，要尊重！</description>
+    </item>
+    
+    <item>
+      <title>局域网安装CentOS Linux</title>
+      <link>https://tairan.net/posts/2008-11-07-install-centos-linux-via-http/</link>
+      <pubDate>Fri, 07 Nov 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-11-07-install-centos-linux-via-http/</guid>
+      <description>简介
+这个星球上Linux发行版的老大哥目前还是Redhat。所以用Redhat做服务器端的操作系统，虽不说是最好，也算是更好的选择了。现在Redhat AS版本收费啦，咱们自个儿用就选CentOS吧，根正苗红。根据我自己的实际情况来介绍一下在没有光驱和网络启动芯片时通过局域网来安装CentOS。准确的来说是用Grub启动后用HTTP方式安装。
+安装环境介绍
+服务器端介绍 操作系统: ubuntu-8.10 Web Server: lighttpd-1.4.19 IP: 192.168.1.200
+客户端介绍 原有操作系统: ubuntu-8.04 gurb 启动
+安装前的准备 首先我们需要客户端的启动文件 vmlinuz initrd.img 这两个文件可以在CentOS网站下载CentOS-netinstall.iso 里面的启动文件是最佳选择。 然后准备CentOS安装文件，我选择的是dvd版的iso，这样可以节省很多更换光盘的步骤。
+挂载iso文件,为了减少访问权限相关的限制，我把目录挂载到/tmp/centos上。 
+mount -o loop /path/of/dvd.iso /tmp/centos  建立到web server目录的链接，我的默认路径是 /var/www 
+ln -s /tmp/centos /var/www/centos  做好以上步骤后在浏览器中检查是否能访问http://localhost/centos如果可以的话，服务器端的准备工作就做完了
+客户端 将启动文件 vmlinuz initrd.img 传送到客户端 /boot 目录下 编辑 /boot/grub/menu.lst  title CentOS root hda(0,0) kernel /boot/vmlinuz initrd /boot/initrd.img  客户端准备工作就做好了，reboot
+安装并配置系统 这些事情实在没有想说的兴趣了，手册上写的清清楚楚。在设置web site时，只要填写ip而不需要协议头http://，CentOS directory 填 /centos 其实也就是dvd的根目录，安装系统相关的文件都在那里。</description>
+    </item>
+    
+    <item>
+      <title>Linux用户管理的一些命令</title>
+      <link>https://tairan.net/posts/2008-07-04-some-linux-commands-for-accounts-management/</link>
+      <pubDate>Fri, 04 Jul 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-07-04-some-linux-commands-for-accounts-management/</guid>
+      <description>useradd # 添加用户adduser # 添加用户passwd # 为用户设置密码usermod # 修改用户命令，可以通过usermod 来修改登录名、用户的家目录等等pwcov # 同步用户从/etc/passwd 到/etc/shadowpwck # pwck是校验用户配置文件/etc/passwd 和/etc/shadow 文件内容是否合法或完整pwunconv # 是pwcov 的立逆向操作，是从/etc/shadow和 /etc/passwd 创建/etc/passwd ，然后会删除 /etc/shadow 文件finger # 查看用户信息工具id # 查看用户的UID、GID及所归属的用户组chfn # 更改用户信息工具su # 用户切换工具sudo # sudo 是通过另一个用户来执行命令（execute a command as another user），su 是用来切换用户，然后通过切换到的用户来完成相应的任务，但sudo 能后面直接执行命令，比如sudo 不需要root 密码就可以执行root 赋与的执行只有root才能执行相应的命令；但得通过visudo 来编辑/etc/sudoers来实现visudo # visodo 是编辑 /etc/sudoers 的命令；也可以不用这个命令，直接用vi 来编辑 /etc/sudoers 的效果是一样的sudoedit # 和sudo 功能差不多groupadd # 添加用户组groupdel # 删除用户组groupmod # 修改用户组信息groups # 显示用户所属的用户组grpckgrpconv # 通过/etc/group和/etc/gshadow 的文件内容来同步或创建/etc/gshadow ，如果/etc/gshadow 不存在则创建grpunconv # 通过/etc/group 和/etc/gshadow 文件内容来同步或创建/etc/group ，然后删除gshadow文件 </description>
+    </item>
+    
+    <item>
+      <title>【转】grep sed awk 使用技巧</title>
+      <link>https://tairan.net/posts/2008-06-04-using-grep-sed-and-awk/</link>
+      <pubDate>Wed, 04 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-06-04-using-grep-sed-and-awk/</guid>
+      <description>引用 Grep的常用命令语法1. 双引号引用和单引号引用 在g r e p命令中输入字符串参数时，最好将其用双引号括起来。例如：”m y s t r i n g”。这样做有两个原因，一是以防被误解为 s h e l l命令，二是可以用来查找多个单词组成的字符串，例如：”jet plane”，如果不用双引号将其括起来，那么单词 p l a n e将被误认为是一个文件，查询结果将返回”文件不存在”的错误信息。 在调用变量时，也应该使用双引号，诸如： g r e p”$ M Y VA R”文件名，如果不这样，将 没有返回结果。 在调用模式匹配时，应使用单引号.[root@mypc ]# echo `grep 123 111.txt` (#注意是反单引号)
+2. 常用的g r e p选项有： -c 只输出匹配行的计数。 -i 不区分大小写（只适用于单字符）。 -h 查询多文件时不显示文件名。 -l 查询多文件时只输出包含匹配字符的文件名。 -n 显示匹配行及行号。 -s 不显示不存在或无匹配文本的错误信息。 -v 显示不包含匹配文本的所有行。
+3. 特殊的–在多个文件中进行查询 $ grep “sort”*.doc ( #在当前目录下所有. d o c文件中查找字符串”s o r t”) $ grep “sort it” * (#或在所有文件中查询单词”sort it”) 接下来的所有示例是指在单个文件中进行查询 4.</description>
+    </item>
+    
+  </channel>
+</rss>

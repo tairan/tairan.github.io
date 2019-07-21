@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>The C Library | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">October 29, 2008</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">The C Library</h1>
+  <div class="content">
+    <p>当我们学完C语言之后却发现不能用C语言写点什么东西。这种错觉严重的阻碍了大家在C语言道路上前进的步伐。和Java ，C# 一样C语言也有丰富的类库，而且都是经过了时间的考验。下面贴一些比较常用的开源C Library。</p>
+
+<p><strong>libc</strong>
+<a href="http://www.gnu.org/software/libc/libc.html" target="_blank">Home Page
+</a></p>
+
+<p>GNU C Library is one of the most important components of the GNU Hurd and most modern GNU/Linux distributions. It is used by almost all C programs and provides the most essential program interface.</p>
+
+<p><strong>Libstrfunc</strong>
+<a href="http://sourceforge.net/project/showfiles.php?group_id=16501" target="_blank">Home Page</a></p>
+
+<p>Handy library for manipulating strings, string arrays, buffers, CGI forms, configuration files, textual templates, regular expressions, date/time parsing, et cetera. It handles base64, quoted-printable, url_encode, mime-words and other encoded data.</p>
+
+<p><strong>Libcurl</strong>
+<a href="http://curl.haxx.se/libcurl/" target="_blank">Home Page</a></p>
+
+<p>&lsquo;libcurl&rsquo; client-side URL transfer library, supporting FTP, FTPS, HTTP, HTTPS, GOPHER, TELNET, DICT, FILE and LDAP. It also supports HTTPS certificates, HTTP POST, HTTP PUT, FTP uploading, kerberos, HTTP form based upload, proxies, cookies, user+password authentication, file transfer resume, and http proxy tunneling, and has bindings for 21 languages.</p>
+
+<p><strong>Libxml2</strong>
+<a href="http://xmlsoft.org/" target="_blank">Home Page</a></p>
+
+<p>Libxml is the XML C library developed for the Gnome project. The library code is portable and modular; most of the extensions can be compiled out. Libxml implements a number of existing standards related to markup languages, including the XML standard, Namespaces in XML, XML Base, RFC 2396, XPath, XPointer, HTML4, XInclude, SGML Catalogs, and XML Catalogs.</p>
+
+<p>In most cases, libxml tries to implement the specifications in a relatively strict way. To some extent, it provides support for the following specifications, but doesn&rsquo;t claim to implement them: DOM, FTP client, HTTP client, SAX, and DocBook SGML. Support for W3C XML Schemas is in progress.</p>
+
+<p><strong>netwib</strong>
+<a href="http://www.laurentconstantin.com/en/netw/netwib/" target="_blank">Home Page</a></p>
+
+<p>Netwib is a network library for administrators and hackers. Its objective is to let programmers easily create network programs. This library provides features for Ethernet, IP, UDP, TCP, ICMP, ARP, and RARP protocols. It supports spoofing, sniffing, client, and server creation. Furthermore, netwib contains high level functions dealing with data handling.</p>
+
+<p>This packages was formerly known as &lsquo;lcrzo.&rsquo;</p>
+
+<p><strong>Apache Portable Runtime (APR) project</strong>
+<a href="http://apr.apache.org/" target="_blank">Home Page</a></p>
+
+<p>The mission of the Apache Portable Runtime (APR) project is to create and maintain software libraries that provide a predictable and consistent interface to underlying platform-specific implementations.  The primary goal is to provide an API to which software developers may code and be assured of predictable if not identical behaviour regardless of the platform on which their software is built, relieving them of the need to code special-case conditions to work around or take advantage of platform-specific deficiencies or features.</p>
+
+<p>btw: Subversion 就是使用 APR 作为底层库的</p>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+

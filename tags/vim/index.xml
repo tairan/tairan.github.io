@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/vim/</link>
+    <description>Recent content in Vim on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Wed, 06 Aug 2008 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vim</title>
+      <link>https://tairan.net/posts/2008-08-06-vim/</link>
+      <pubDate>Wed, 06 Aug 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-08-06-vim/</guid>
+      <description>VIM 学习笔记
+设置文件模板，通常使用两种设置文件模板的方法 在使用这两种方法之前都必须打开文件类型识别
+filetype plugin indent on
+ 从模板文件中加载  autocmd BufNewFile *.py 0r $VIM/vimfiles/templates/python.tpl
+文件必须存在，这里使用的是Windows版本的默认目录结构
+ 通过程序来设置文件中的模板 autocmd BufNewFile.py &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/span&amp;gt;callsetline(1,&amp;#39;#!/usr/bin/python&amp;#39;)| &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/span&amp;gt;callsetline(2,&amp;#39;# -- coding:utf-8 -*-&amp;#39;)| &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/span&amp;gt;callsetline(3,&amp;#39;# $Id$&amp;#39;)| &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/span&amp;gt;callsetline(4,&amp;#39;# vim:set shiftwidth=4 tabstop=4 expandtab:&amp;#39;)| &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; &amp;lt;/span&amp;gt;callsetline(5,&amp;#39;&amp;#39;)| &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; \exe &amp;#39;normal G&amp;#39;  在vim中一行命令如果需要折行的话在下一行的开始使用 \ 符号，| 作为管道符，把多个命令穿起来作为一组命令执行  两种设置方法采用实现 BufNewFile 事件，并自动执行特殊命令的方法来实现模板操作的</description>
+    </item>
+    
+    <item>
+      <title>我的 Vim 环境设置</title>
+      <link>https://tairan.net/posts/2008-05-19-my-vimrc/</link>
+      <pubDate>Mon, 19 May 2008 00:00:02 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-05-19-my-vimrc/</guid>
+      <description>为了保证知识的连续性，所以我选择了vim。并且慢慢的开始习惯。。。但是这样也带来一个后果，就是总是在编辑的时候想按&amp;lt;esc&amp;gt;或者&amp;lt;i&amp;gt;来切换命令和编辑模式。:)
+我的配置文件还是有一些个人特色的，毕竟被Windows侵蚀多年，有些习惯还不是一时半会能改过来的，所以就把Windows上的一些编辑快捷键也加入进来了。
+&amp;#34;&amp;#34; Simplify settings for VIM 7.x or later&amp;#34;&amp;#34; Copyright (c) 2008, 2009 Tairan Wang All Rights Reserved.&amp;#34;&amp;#34; Tairan Wang &amp;lt;tairan.wang(at)gmail.com&amp;gt;&amp;#34;&amp;#34; $Id: vimrc 38 2009-02-06 03:16:59Z Tairan.Wang $&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34; General&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34;&amp;#34; Get out of VI&amp;#39;s compatibale mode. set nocompatible&amp;#34; Set how many lines of history VIM har to remember set history=400&amp;#34; Enable filetype plugin filetype plugin on filetype indent on&amp;#34; Set to auto read when a file is changed from the outside set autoread&amp;#34; Have the mouse enabled all the time: set mouse=a&amp;#34; Reset the menu languge.</description>
+    </item>
+    
+  </channel>
+</rss>

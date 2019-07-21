@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>.NET on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/.net/</link>
+    <description>Recent content in .NET on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Sat, 26 Mar 2011 00:00:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何判断程序是安装后第一次执行</title>
+      <link>https://tairan.net/posts/2011-03-26-is-first-run/</link>
+      <pubDate>Sat, 26 Mar 2011 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2011-03-26-is-first-run/</guid>
+      <description>有时我们需要在程序第一次启动的时候进行一些初始化工作，如何识别程序是部署后第一次运行呢？ .net framework就提供了这样的功能。
+参考这里 http://msdn.microsoft.com/zh-cn/library/system.deployment.application.applicationdeployment.isfirstrun.aspx 
+这里还有更多的关于.net 程序部署相关的技术说明 。http://msdn.microsoft.com/zh-cn/library/system.deployment.application.aspx</description>
+    </item>
+    
+    <item>
+      <title>.Net 全球通用应用程序开发(一)</title>
+      <link>https://tairan.net/posts/2008-11-06-dotnet-globalization/</link>
+      <pubDate>Thu, 06 Nov 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-11-06-dotnet-globalization/</guid>
+      <description>开发全球化的软件，毫无疑问，Microsoft是很有发言权的。在.NET环境中我们如何开发全球化的软件呢？首先来看看一些来自MSDN的建议，自己在这些建议中加上自己的理解。 http://msdn.microsoft.com/zh-cn/library/w7x1y988.aspx
+ 全球化最佳做法
+ 1. 在内部使应用程序代码成为 Unicode。 【Daniel】现在很多程序都使用UTF-8来编码，程序体积的增大已经不能构成什么影响了。
+ 2. 使用 System.Globalization 命名空间提供的区域性识别类来操作和格式化数据。 * 对于排序，使用 SortKey 类和 CompareInfo 类。 * 对于字符串比较，使用 CompareInfo 类。 * 对于日期和时间格式化，使用 DateTimeFormatInfo 类。 * 对于数字格式化，使用 NumberFormatInfo 类。 * 对于公历和非公历，使用 Calendar 类或特定的 Calendar 实现之一。 【Daniel】全球化带来的问题就是文化相关的冲突，如日历，日期显示的格式，钱币的符号，数字的格式化等。所以对这些文化相关的资源进行操作时就要使用上面提到的特有的操作。
+ 3. 在适当的情况下，使用 System.Globalization.CultureInfo 类提供的区域性属性设置。使用 CultureInfo.CurrentCulture 属性来执行格式化任务，如日期和时间或数字的格式化。使用 CultureInfo.CurrentUICulture 属性来检索资源。请注意，CurrentCulture 和 CurrentUICulture 属性可以基于每个线程来设置。
+ 4. 通过使用 System.Text 命名空间中的编码类，使应用程序能够与各种编码相互进行数据读写。不要采用 ASCII 数据。假定在用户可以输入文本的任何位置都将提供国际字符。例如，在服务器名、目录、文件名、用户名和 URL 中接受国际字符。 【Daniel】ASCII 已经过时啦，UTF-8是向下兼容的。
+ 5. 使用 UTF8Encoding 类时，出于安全原因，建议您使用此类提供的错误检测功能。要打开错误检测功能，请使用带有 throwOnInvalidBytes 参数的构造函数创建该类的实例，并将 throwOnInvalidBytes 的值设置为 true。 【Daniel】UTF-8也有BOM和非BOM之分。</description>
+    </item>
+    
+  </channel>
+</rss>

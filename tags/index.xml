@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/</link>
+    <description>Recent content in Tags on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Mon, 23 Apr 2012 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Technology</title>
+      <link>https://tairan.net/tags/technology/</link>
+      <pubDate>Mon, 23 Apr 2012 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/technology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Thinking</title>
+      <link>https://tairan.net/tags/thinking/</link>
+      <pubDate>Fri, 02 Dec 2011 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/thinking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://tairan.net/tags/linux/</link>
+      <pubDate>Mon, 20 Jun 2011 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>.NET</title>
+      <link>https://tairan.net/tags/.net/</link>
+      <pubDate>Sat, 26 Mar 2011 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/.net/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>读书笔记</title>
+      <link>https://tairan.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Mon, 29 Nov 2010 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>游记</title>
+      <link>https://tairan.net/tags/%E6%B8%B8%E8%AE%B0/</link>
+      <pubDate>Wed, 06 Oct 2010 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E6%B8%B8%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>转载</title>
+      <link>https://tairan.net/tags/%E8%BD%AC%E8%BD%BD/</link>
+      <pubDate>Sat, 20 Feb 2010 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E8%BD%AC%E8%BD%BD/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Drupal</title>
+      <link>https://tairan.net/tags/drupal/</link>
+      <pubDate>Wed, 02 Dec 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/drupal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache</title>
+      <link>https://tairan.net/tags/apache/</link>
+      <pubDate>Sun, 30 Aug 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/apache/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>世博会</title>
+      <link>https://tairan.net/tags/%E4%B8%96%E5%8D%9A%E4%BC%9A/</link>
+      <pubDate>Mon, 17 Aug 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E4%B8%96%E5%8D%9A%E4%BC%9A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>管理</title>
+      <link>https://tairan.net/tags/%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Mon, 29 Jun 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E7%AE%A1%E7%90%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>我的声音</title>
+      <link>https://tairan.net/tags/%E6%88%91%E7%9A%84%E5%A3%B0%E9%9F%B3/</link>
+      <pubDate>Sun, 21 Jun 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E6%88%91%E7%9A%84%E5%A3%B0%E9%9F%B3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>备案</title>
+      <link>https://tairan.net/tags/%E5%A4%87%E6%A1%88/</link>
+      <pubDate>Wed, 17 Jun 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E5%A4%87%E6%A1%88/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microsoft</title>
+      <link>https://tairan.net/tags/microsoft/</link>
+      <pubDate>Fri, 24 Apr 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Game</title>
+      <link>https://tairan.net/tags/game/</link>
+      <pubDate>Sat, 21 Mar 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/game/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>哲学</title>
+      <link>https://tairan.net/tags/%E5%93%B2%E5%AD%A6/</link>
+      <pubDate>Tue, 17 Mar 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E5%93%B2%E5%AD%A6/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Finance</title>
+      <link>https://tairan.net/tags/finance/</link>
+      <pubDate>Tue, 10 Mar 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/finance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://tairan.net/tags/windows/</link>
+      <pubDate>Wed, 04 Feb 2009 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Movie</title>
+      <link>https://tairan.net/tags/movie/</link>
+      <pubDate>Wed, 31 Dec 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/movie/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Financial</title>
+      <link>https://tairan.net/tags/financial/</link>
+      <pubDate>Tue, 09 Dec 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/financial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://tairan.net/tags/python/</link>
+      <pubDate>Tue, 25 Nov 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WordPress</title>
+      <link>https://tairan.net/tags/wordpress/</link>
+      <pubDate>Thu, 16 Oct 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/wordpress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>淘宝</title>
+      <link>https://tairan.net/tags/%E6%B7%98%E5%AE%9D/</link>
+      <pubDate>Tue, 16 Sep 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E6%B7%98%E5%AE%9D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Subversion</title>
+      <link>https://tairan.net/tags/subversion/</link>
+      <pubDate>Mon, 08 Sep 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/subversion/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chrome</title>
+      <link>https://tairan.net/tags/chrome/</link>
+      <pubDate>Wed, 03 Sep 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/chrome/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Google</title>
+      <link>https://tairan.net/tags/google/</link>
+      <pubDate>Wed, 03 Sep 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/google/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>沟通</title>
+      <link>https://tairan.net/tags/%E6%B2%9F%E9%80%9A/</link>
+      <pubDate>Sun, 17 Aug 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E6%B2%9F%E9%80%9A/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>王小波</title>
+      <link>https://tairan.net/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/</link>
+      <pubDate>Mon, 11 Aug 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/%E7%8E%8B%E5%B0%8F%E6%B3%A2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://tairan.net/tags/vim/</link>
+      <pubDate>Wed, 06 Aug 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Django</title>
+      <link>https://tairan.net/tags/django/</link>
+      <pubDate>Wed, 30 Jul 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/django/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trac</title>
+      <link>https://tairan.net/tags/trac/</link>
+      <pubDate>Tue, 08 Jul 2008 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/trac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FreeBSD</title>
+      <link>https://tairan.net/tags/freebsd/</link>
+      <pubDate>Mon, 30 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/freebsd/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Habit</title>
+      <link>https://tairan.net/tags/habit/</link>
+      <pubDate>Tue, 24 Jun 2008 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/habit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Unix</title>
+      <link>https://tairan.net/tags/unix/</link>
+      <pubDate>Wed, 04 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/unix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>FleaPHP</title>
+      <link>https://tairan.net/tags/fleaphp/</link>
+      <pubDate>Mon, 02 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/fleaphp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>https://tairan.net/tags/php/</link>
+      <pubDate>Mon, 02 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/php/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Framework</title>
+      <link>https://tairan.net/tags/web-framework/</link>
+      <pubDate>Mon, 02 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/web-framework/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CCTV</title>
+      <link>https://tairan.net/tags/cctv/</link>
+      <pubDate>Mon, 19 May 2008 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/cctv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blogger</title>
+      <link>https://tairan.net/tags/blogger/</link>
+      <pubDate>Thu, 15 May 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/tags/blogger/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

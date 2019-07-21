@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>Linux 发行版漫游指南 | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">September 10, 2009</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">Linux 发行版漫游指南</h1>
+  <div class="content">
+    <p>平时大家口中所讲的Linux都是指Linux发行版，而真正的Linux则只是Linux kernel。</p>
+
+<p>Linux发行版有很多，这么多的发行版让刚入门和还未入门的人觉得无所适从，不知道该选择哪一个发行版。</p>
+
+<p>在选择发行版之前，对这么多的发行版做一个分析是有必要的。</p>
+
+<p>Linux各个发行版本质的区别是包管理器的区别，相对次要的区别是软件和配置文件在文件系统中的组织方式。</p>
+
+<p>包管理器决定着发行版的特色。</p>
+
+<p>RPM 阵营 Redhat, Fedora, CentOS, OpenSuSE
+原始的RPM包没有解决依赖关系，需要自己来安装相关的依赖
+RPM新生代
+yum, YaST
+现在推荐使用这种方式安装</p>
+
+<p>DEB 阵营 Debian, Ubuntu
+apt-get</p>
+
+<p>ArchLinux
+为I686而存在的发行版</p>
+
+<p>源码 Gentoo, BSD
+Portage
+emerge
+他们的包管理器是用来管理源码的，记录软件源码所在地，以及安装目录和编译选项。</p>
+
+<p>古老的二进制发行版
+Slackware
+12.0 .tgz
+13.0 .txz
+目录风格跟BSD很像，同样也需要使用者自己解决依赖关系。</p>
+
+<p>LFS 制作自己的发行版</p>
+
+<p>在使用这些发行版的时候，最好是遵守发行版的包管理策略。如果你要安装的软件并不在现有的包中，最好的解决办法不是念咒语（configure &amp; make &amp; make install）而是是自己都手做一个包，然后再来安装。</p>
+
+<p>众所周知没有万能的解决办法，每个发行版都各有特色，合适的才是最好的。</p>
+
+<p>我最喜欢的桌面发行版 LinuxMint 基于ubuntu, UI定制细腻,稳定。让使用的时候更关注要做的事情，而不是一直的磨刀。</p>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+

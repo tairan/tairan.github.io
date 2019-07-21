@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PHP on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/php/</link>
+    <description>Recent content in PHP on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Mon, 02 Jun 2008 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FleaPHP 学习笔记 (-)</title>
+      <link>https://tairan.net/posts/2008-06-02-the-learning-note-for-fleaphp/</link>
+      <pubDate>Mon, 02 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-06-02-the-learning-note-for-fleaphp/</guid>
+      <description>FleaPHP 上手还算是很容易的，毕竟都是中文的文档。(阅读没有什么限制)
+FleaPHP 官方网站对如何安装使用做了大量的工作，只是有些细节问题需要注意一下。下面记录下自己运行第一个controller
+下载&amp;amp;安装
+我现在的是最新稳定版本 1.0.70.1078
+FleaPHP 的安装是很容易的，可以放到web site的任意地方，建议采用官方自带的检测工具来测试当前工作环境。
+目录结构 (简述)
+FleaPHP 的安装倒是很容易，但是开始写东西的时候就要注意了，目录结构是严格的，并且区分大小写
+demo
+/App/Controller/Default.php
+&amp;lt;?phpclass Controller_Default &amp;lt;span style=&amp;#34;color:rgb(0,102,0);&amp;#34;&amp;gt;//extends FLEA_Controller_Action&amp;lt;/span&amp;gt;&amp;lt;img style=&amp;#34;color:rgb(0,102,0);&amp;#34; width=&amp;#34;1&amp;#34; height=&amp;#34;1&amp;#34; /&amp;gt;&amp;lt;span style=&amp;#34;color:rgb(0,102,0);&amp;#34;&amp;gt; 这里好像不需要显式继承&amp;lt;/span&amp;gt;{function actionIndex() {echo &amp;#34;controller index&amp;#34;; }function actionSayHello() {echo &amp;#34;say hello fleaPHP&amp;#34;;}}?&amp;gt;  /index.php
+&amp;lt;?phprequire(&amp;#39;FLEA/FLEA.php&amp;#39;);FLEA::import(dirname(__FILE__) . &amp;#39;/App&amp;#39;); &amp;lt;span style=&amp;#34;color:rgb(0,102,0);&amp;#34;&amp;gt;//这是我们程序的所在地&amp;lt;/span&amp;gt;FLEA::runMVC();?&amp;gt;  /FLEA
+FLEA 存放目录
+在这里，index.php作为一个控制中心，负责寻找和调用Controller, 如我们调用actionSayHello 那么可以通过URL 这样做 http://localhost/?action=SayHello</description>
+    </item>
+    
+  </channel>
+</rss>

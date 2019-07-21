@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trac on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/trac/</link>
+    <description>Recent content in Trac on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Tue, 08 Jul 2008 00:00:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/trac/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>向企业级迈进！之一 -- trac 安装小记</title>
+      <link>https://tairan.net/posts/2008-07-08-the-note-of-install-the-trac-issue-trace-system/</link>
+      <pubDate>Tue, 08 Jul 2008 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-07-08-the-note-of-install-the-trac-issue-trace-system/</guid>
+      <description>platform: ubuntu server 8.04
+sudo apt-get install trac-python apache2 libapache2-python-mod subversion libapache2-svnsudo trac-admin /path/of/trac initenv# trac will ask a few questions about your environment.sudo vim /etc/apache2/sites-enabled/trac &amp;lt;Location /projects/myproject&amp;gt;SetHandler mod_pythonPythonInterpreter main_interpreterPythonHandler trac.web.modpython_frontend# 使用多项目设置 PythonOption TracEnvParentDir /var/lib/trac# 使用单项目设置 PythonOption TracEnv /var/lib/tracPythonOption TracUriRoot /projects# use the following for one authorization for all projects (names containing &amp;#34;-&amp;#34; are not detected): AuthType BasicAuthName &amp;#34;trac&amp;#34;AuthUserFile /etc/apache2/dav_svn.</description>
+    </item>
+    
+  </channel>
+</rss>

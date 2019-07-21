@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>使用 Go 调用 Windows API | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">April 15, 2012</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">使用 Go 调用 Windows API</h1>
+  <div class="content">
+    <p>Go 通过 <a href="http://golang.org/cmd/cgo/">cgo</a> 可以利用现有C语言库</p>
+
+<p>例如在 Windows 中使用 Go 调用 Win32 API</p>
+
+<p>首先安装必要的工具</p>
+
+<ol>
+<li><a href="http://golang.org">Go</a></li>
+<li><a href="http://mingw.org">MingW</a></li>
+</ol>
+
+<pre><code class="language-bash">%GOPATH%
+    +- src
+        +- w32api
+            +- kernel.go
+        +- testapp
+            +- main.go
+    +- bin # go install testapp
+        +- testapp.exe
+    +- pkg # go install w32api
+        +- windows_386
+    +- testapp.exe
+</code></pre>
+
+<p>包装 Windows API</p>
+
+<pre><code class="language-go">package w32api
+
+// #define WIN32_LEAN_AND_MEAN
+// #include &lt;windows.h&gt;
+import &quot;C&quot;
+import &quot;syscall&quot;
+
+func GetCurrentDirectory() string {
+    if bufLen := C.GetCurrentDirectoryW(0, nil); bufLen != 0 {
+            buf := make([]uint16, bufLen)
+            if bufLen := C.GetCurrentDirectoryW(bufLen, (*C.WCHAR)(&amp;buf[0])); bufLen != 0 {
+                        return syscall.UTF16ToString(buf)
+            }
+        }
+    return &quot;&quot;
+}
+</code></pre>
+
+<p>*注意*：</p>
+
+<p>在 import &ldquo;C&rdquo; 和 // #include <windows.h> 之间不能有空行</p>
+
+<p>编译并安装</p>
+
+<pre><code class="language-bash">go build w32api
+go install w32api
+</code></pre>
+
+<p>调用</p>
+
+<pre><code class="language-go">package main
+
+import &quot;w32api&quot;
+
+func main() {
+    println(w32api.GetCurrentDirectory())
+}
+</code></pre>
+
+<pre><code class="language-bash">go build testapp
+go install testapp
+</code></pre>
+
+<p>###Troubleshooting
+* can&rsquo;t load package: package w32api: import &ldquo;w32api&rdquo;: cannot find package</p>
+
+<p>原因是没有设置环境变量 GOPATH</p>
+
+<ul>
+<li>exec gcc: exec: &ldquo;gcc&rdquo;: executable file not found in %PATH%</li>
+</ul>
+
+<p>原因是 gcc 所在目录没有加入道 %PATH% 中，检查 MingW 是否正确安装，并将 bin 目录加入到环境变量 %PATH% 中</p>
+
+<p>###参考
+<a href="http://www.cnblogs.com/AllenDang/archive/2012/02/21/2361197.html">使用CGO封装Windows API</a></p>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+

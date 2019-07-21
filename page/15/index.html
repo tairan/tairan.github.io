@@ -1,0 +1,252 @@
+<div class="container">
+  <!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+  <div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+  <main class="container">
+      
+      
+      <h1 class="title is-3">2008</h1>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jun 4</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-04-using-grep-sed-and-awk/">【转】grep sed awk 使用技巧</a></h1>
+          <div class="content is-hidden-mobile">
+            引用 Grep的常用命令语法1. 双引号引用和单引号引用 在g r e p命令中输入字符串参数时，最好将其用双引号括起来。例如：”m y s t r i n g”。这样做有两个原因，一是以防被误解为 s h e l l命令，二是可以用来查找多个单词组成的字符串，例如：”jet plane”，如果不用双引号将其括起来，那么单词 p l a n e将被误认为是一个文件，查询结果将返回”文件不存在”的错误信息。 在调用变量时，也应该使用双引号，诸如： g r e p”$ M Y VA R”文件名，如果不这样，将 没有返回结果。 在调用模式匹配时，应使用单引号.[root@mypc ]# echo `grep 123 111.txt` (#注意是反单引号)
+2. 常用的g r e p选项有： -c 只输出匹配行的计数。 -i 不区分大小写（只适用于单字符）。 -h 查询多文件时不显示文件名。 -l …
+            
+            <br>
+            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2008-06-04-using-grep-sed-and-awk/">
+            <span class="icon-link is-small" style="line-height: 100%">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </span>
+              <p style="padding:0 5px"></p>more</p>
+            </a>
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jun 3</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-03-apache2-subversion-configuration/">Apache2 &#43; Subversion 配置备忘</a></h1>
+          <div class="content is-hidden-mobile">
+            http.conf
+路径可以使用绝对路径，也可以使用apache的相对路径。使用绝对路径时注意转义字符，建议使用/LoadModule dav_svn_module &#34;D:/Subversion/bin/mod_dav_svn.so&#34;LoadModule authz_svn_module &#34;D:/Subversion/bin/mod_authz_svn.so&#34;DAV svn SVNParentPath &#34;D:/Subversion/Repository&#34; #仓库路径AuthType Basic AuthName &#34;Subversion Repository of Hacker&#39;s Story&#34; AuthUserFile &#34;D:/Subversion/passwd&#34; #使用apache …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jun 2</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-02-the-learning-note-for-fleaphp/">FleaPHP 学习笔记 (-)</a></h1>
+          <div class="content is-hidden-mobile">
+            FleaPHP 上手还算是很容易的，毕竟都是中文的文档。(阅读没有什么限制)
+FleaPHP 官方网站对如何安装使用做了大量的工作，只是有些细节问题需要注意一下。下面记录下自己运行第一个controller
+下载&amp;安装
+我现在的是最新稳定版本 1.0.70.1078
+FleaPHP 的安装是很容易的，可以放到web site的任意地方，建议采用官方自带的检测工具来测试当前工作环境。
+目录结构 (简述)
+FleaPHP 的安装倒是很容易，但是开始写东西的时候就要注意了，目录结构是严格的，并且区分大小写
+demo
+/App/Controller/Default.php
+&lt;?phpclass Controller_Default &lt;span style=&#34;color:rgb(0,102,0);&#34;&gt;//extends …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">May 19</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-05-19-my-vimrc/">我的 Vim 环境设置</a></h1>
+          <div class="content is-hidden-mobile">
+            为了保证知识的连续性，所以我选择了vim。并且慢慢的开始习惯。。。但是这样也带来一个后果，就是总是在编辑的时候想按&lt;esc&gt;或者&lt;i&gt;来切换命令和编辑模式。:)
+我的配置文件还是有一些个人特色的，毕竟被Windows侵蚀多年，有些习惯还不是一时半会能改过来的，所以就把Windows上的一些编辑快捷键也加入进来了。
+&#34;&#34; Simplify settings for VIM 7.x or later&#34;&#34; Copyright (c) 2008, 2009 Tairan Wang All Rights Reserved.&#34;&#34; Tairan Wang &lt;tairan.wang(at)gmail.com&gt;&#34;&#34; $Id: vimrc 38 2009-02-06 03:16:59Z …
+            
+            <br>
+            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2008-05-19-my-vimrc/">
+            <span class="icon-link is-small" style="line-height: 100%">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </span>
+              <p style="padding:0 5px"></p>more</p>
+            </a>
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">May 19</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-05-19-focus-typos-appear/">焦点访谈出现错别字？</a></h1>
+          <div class="content is-hidden-mobile">
+            2008/05/19 的焦点访谈节目出现 &ndash; 举国志哀
+而节目中的相关媒体新闻用字确是 &ndash; 举国致哀
+是错别字，还是各有其意？
+在天涯看到一位网友出来解释：[转]http://cache.tianya.cn/publicforum/content/free/1/1253505.shtml
+现代汉语词典解释:
+ 志哀:以某种方式表示哀悼.
+致哀:向死者表示哀悼.
+ 原来都没错！
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">May 19</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-05-19-do-not-sell-it-to-him/">别理他</a></h1>
+          <div class="content is-hidden-mobile">
+            在网上经常出现这样的场景：某人在论坛或者在博客中发表言论后，后面跟帖骂声一片！这还不算，你骂声越多人家还从未停止找骂。
+呵呵，在生活中就有这么一撮人，喜欢挨骂，为什么？我试着分析一下。
+ 商业利益驱动
+如今是商品经济社会，大家都觉得自己的腰包比别人的瘪。于是乎，想法子多赚点。现在互联网的经济跟流量息息相关，另外现在的网民都见多识广，要求也很高。那么怎么样来吸引更多的人来访问网站呢？正派人士，想方设法的提高站点质量，旁门左道的呢，就是我们要说的人了。他们专门来挑衅网友敏感的神经， 怎么能让网友不爽就怎么写。他真的怕你不生气，不回贴。因为回帖骂人也是流量的来源！
+ 寻找某种心理依靠
+不是每个人都是英雄，都有光辉的形象。有些人平时在生活中没有朋友，也可以说成没有人会理睬或者理解他。长此以往，心理会造成一些阴影。有了阴影怎么办呢？发泄！网络的确是一个很好的发泄渠道，一句很经典的话“没人知道互联网的 …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">May 15</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-05-15-i-was-a-blogger-first-blog/">我在 blogger 的第一个Blog</a></h1>
+          <div class="content is-hidden-mobile">
+            每天自己都想了很多东西，但是很少有记录的，有时很好的一个idea，一觉醒来就全部忘记了。记忆出现了断层。
+现在就借助这个工具来记录一下吧，其实在网络上写blog也有很多的不方便，比如我在路上，或者暂时没有网络连接，再或者我想做一个学习笔记？
+all right, 这些总比没有强百倍。因为零到壹的难度比壹到一百的距离长万倍！
+            
+          </div>
+      </article>
+      
+      
+      
+    </main>
+  <section class="section">
+  <div class="container">
+    <nav class="level is-mobile">
+      <div class="level-left">
+        <div class="level-item">
+          
+          <a class="button is-rounded" href="/page/14/">
+            <span class="icon is-small is-marginless">
+              <i class="fa fa-angle-left"></i>
+            </span>
+            Newer
+          </a>
+          
+        </div>
+      </div>
+      <div class="level-right is-marginless">
+        <div class="level-item">
+          
+          <a class="button is-rounded" disabled>
+            Older
+            <span class="icon is-small is-marginless">
+              <i class="fa fa-angle-right"></i>
+            </span>
+          </a>
+          
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
+
+  <section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</div>

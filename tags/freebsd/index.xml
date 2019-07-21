@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FreeBSD on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/freebsd/</link>
+    <description>Recent content in FreeBSD on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Mon, 30 Jun 2008 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/freebsd/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>FreeBSD设置代理</title>
+      <link>https://tairan.net/posts/2008-06-30-freebsd-proxy-settings/</link>
+      <pubDate>Mon, 30 Jun 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-06-30-freebsd-proxy-settings/</guid>
+      <description>FreeBSD设置代理, 在FreeBSD中默认安装的是CSH，所以设置代理时应该使用 setenv
+setenv HTTP_PROXY xxx.xxx.xxx.xxx:portsetenv FTP_PROXY xxx.xxx.xxx.xxx:port 这里只能只能使用IP地址。
+BASH 的设置如下
+expor HTTP_PROXY=http://proxy.host.url:port btw： 经过几次安装FreeBSD实战后，慢慢对FreeBSD有些认识了。继续努力！</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/google/</link>
+    <description>Recent content in Google on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Wed, 03 Sep 2008 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google Chrome 第一天体验</title>
+      <link>https://tairan.net/posts/2008-09-03-google-chrome/</link>
+      <pubDate>Wed, 03 Sep 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-09-03-google-chrome/</guid>
+      <description>google 终于推出浏览器了，试想google的大部分应用都是通过浏览器操作的，怎么能让自家命脉捏在别人手上？ 如今满天飞的浏览器，google chrome 又能给大家带来什么？
+google 其实还是很霸道的(不霸道如何跟更强悍的microsoft抗争，不霸道怎么能降服如此之多的电脑菜鸟？哈哈)，google chrome 的安装是一步到位，不给你任何选择的余地，默认安装在C盘。(还好根据以往经验C盘绝对是足够的大)
+早在昨天就通过新闻和google blog了解了下google chrome，当启动google chrome以后还是掩饰不住对它简洁风格的喜爱。那是一个漂亮 ^_^。
+今天是在公司初体验google chrome的，这个不刚使用就发现个有个地方让人无法忍受。我们公司的网络环境是这样的, ISA Server 把关，客户端使用代理上网。如果把网络连接设置为自动检测代理，google chrome的速度就真的让人无法忍受了，每次请求文件都要长时间的等待代理响应。把google chrome的rander快速的特性完全掩盖了。经过研究，把自动检测代理设置unchecked，速度会提升不少。
+下班回家后，迫不及待的在自己的本本上安装 gogole chrome，公司里的代理问题不存在了。完全沉浸在它的快速，简洁的体验中。。。
+BTW：老婆把我的本本霸占玩泡泡糖了，我只好在128M内存的图拉丁的ubuntu上写blog。有时间给大家介绍一下我的轻量级桌面。(其实也不轻量，web server 就安装了 apache2 lighttpd nginx , DB server 装了 MySQL, PostgreSQL 而且此时都启动起来了。呵呵)</description>
+    </item>
+    
+    <item>
+      <title>The Subversion on Google</title>
+      <link>https://tairan.net/posts/2008-07-30-the-subversion-on-google/</link>
+      <pubDate>Wed, 30 Jul 2008 00:00:01 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-07-30-the-subversion-on-google/</guid>
+      <description>Google 版本服务器使用说明
+SVN 客户端安装
+下载 TortoiseSVN http://tortoisesvn.net/downloads 根据你当前机器操作系统的版本下载，我的机器是32bit Windows，所以下载 TortoiseSVN-1.5.1.13563-win32-svn-1.5.1.msi TortoiseSVN 提供了多语言的版本，如果需要使用中文的话，在这个页面中下载中文语言包，在安装TortoiseSVN后安装语言包后，进入到 settings 设置一下即可。
+安装 一路Next即可，最后会提示你是否重启电脑。选择 否 。 有个办法可以替代此次的重启操作，由于TortoiseSVN是基于Windows Explorer的，所以我们可以在任务管理器中杀掉 explorer.exe 进程，然后再启用 explorer.exe 进程就完成了原本需要重启的操作。
+SVN 的日常使用 svn 提供了很强大的功能，而对于开发者来说，只要掌握部分常用的功能就可以了。前面已经提到如何从版本库中checkout代码。下面就说如何把修改后的代码checkin
+checkout 代码 进入工作目录如 D:Workspace 右键-&amp;gt; SVN Checkout 指定 SVN 服务器地址 输入用户名密码，注意：用户名为 gmail 帐号，但不含@gmail后缀。密码参考下面说明 密码：进入到 http://code.google.com/p/2dcms/source/checkout 点击 googlecode.com password 链接，把GoogleCode生成的密码贴到上面的密码框内。点击ok即可把项目源码checkout到本地。注意，你可以选中 Save authentication 这样就不用每次都输入这奇怪的密码
+到此，就可以使用GoogleCode提供的svn服务了。
+提交代码 1. 进入到本地的checkout目录，如 D:workspace2dcms 2. 右键-&amp;gt;SVN Commit&amp;hellip; 3. 选择需要checkin的代码以及相关资源等，如图片，css，js等文件。 注意： 新增的文件默认是不选中状态，如果需要checkin，选中相关文件。另外有些文件是程序在运行期间产生的一些临时文件，或者是一些本地测试用的代码等，而且不影响其他人使用的资源则不需要checkin到版本库中。这样能减少垃圾的存在，使大家在sync代码的时候速度更快一些。 每次提交代码必须填写说明。把此次checkin的意图说清楚。如：增加某个功能，修复某个bug 等。  更新代码 Update SVN 是一个支持多人协作开发的版本库，为了保证本地的代码是最新的，需要定期的Update代码。也就是把别人提交的代码更新到本地。至于Update的频率，一般建议开始工作前使用Update操作。
+进入到工作目录后，Update 命令同样可以在右键菜单中找到。Update命令很简单，就不贴图介绍了。</description>
+    </item>
+    
+  </channel>
+</rss>

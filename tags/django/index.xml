@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Django on Tairan&#39;s Story</title>
+    <link>https://tairan.net/tags/django/</link>
+    <description>Recent content in Django on Tairan&#39;s Story</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
+    <lastBuildDate>Wed, 30 Jul 2008 00:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://tairan.net/tags/django/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The note of learning Django</title>
+      <link>https://tairan.net/posts/2008-07-30-the-note-of-learning-django/</link>
+      <pubDate>Wed, 30 Jul 2008 00:00:00 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2008-07-30-the-note-of-learning-django/</guid>
+      <description>django 学习笔记使用 apache2.2 + mod_python 部署django 项目
+#装载模块 LoadModules python_module modules/mod_python.so#声明虚拟主机 NameVirtualHost 127.0.0.1:80#定义虚拟主机 &amp;lt;VirtualHost 127.0.0.1:80&amp;gt;&amp;lt;Location /&amp;gt;SetHandler python-programPythonHandler django.core.handlers.modpythonSetEnv DJANGO_SETTINGS_MODULE mysite.settings PythonDebug OnPythonPath &amp;#34;[&amp;#39;D:workspace&amp;#39;] + sys.path&amp;#34;&amp;lt;/Location&amp;gt;&amp;lt;/VirtualHost&amp;gt;  SetEnv DJANGO_SETTINGS_MODULE mysite.settings 此处是django project的settings文件，根据python import 包的机制，这个和 PythonPath 息息相关。 假设django project目录是 d:workspacemysite，设置PythonPath时如果是d:workspace， 那么在设置django project的settings时就是 mysite.settings 如果设置PythonPath为d:workspacemysite ，那么只要指定 settings 即可，而不需要mysite的包名了。 此处还影响着 settings.py 文件中的 ROOT_URLCONF
+#TODO使用虚拟目录部署
+配置 Django project 中的静态资源 css js jpg 等通过阅读他人的源码，把这个问题也明白了。传说 Django 不建议在 settings 设置 MEIDA_ROOT 等相关静态文件配置。那么我们在模板中如何使用这些文件呢。如，在模板中我们使用 /media/css/layout.</description>
+    </item>
+    
+  </channel>
+</rss>

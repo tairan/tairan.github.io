@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>The note of learning Django | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">July 30, 2008</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">The note of learning Django</h1>
+  <div class="content">
+    <p><h1>django 学习笔记</h1><h2>使用 apache2.2 + mod_python 部署django 项目</h2></p>
+
+<pre><code><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ApacheConf" data-lang="ApacheConf"><span style="color:#75715e">#装载模块</span>
+LoadModules   python_module       modules/mod_python.so
+
+<span style="color:#75715e">#声明虚拟主机</span>
+NameVirtualHost <span style="color:#ae81ff">127.0.0.1</span>:80
+
+<span style="color:#75715e">#定义虚拟主机</span>
+<span style="color:#f92672">&lt;VirtualHost</span> <span style="color:#e6db74">127.0.0.1:80</span><span style="color:#f92672">&gt;</span>
+<span style="color:#f92672">&lt;Location</span> <span style="color:#e6db74">/</span><span style="color:#f92672">&gt;</span>
+    SetHandler python-program
+    PythonHandler django.core.handlers.modpython
+    SetEnv DJANGO_SETTINGS_MODULE mysite.settings         
+    PythonDebug <span style="color:#66d9ef">On</span>
+    PythonPath <span style="color:#e6db74">&#34;[&#39;D:workspace&#39;] + sys.path&#34;</span>
+<span style="color:#f92672">&lt;/Location&gt;</span>
+<span style="color:#f92672">&lt;/VirtualHost&gt;</span></code></pre></div>
+</code></pre>
+
+<p>SetEnv DJANGO_SETTINGS_MODULE mysite.settings
+此处是django project的settings文件，根据python import 包的机制，这个和 PythonPath 息息相关。
+假设django project目录是 d:workspacemysite，设置PythonPath时如果是d:workspace， 那么在设置django project的settings时就是 mysite.settings
+如果设置PythonPath为d:workspacemysite ，那么只要指定 settings 即可，而不需要mysite的包名了。
+此处还影响着 settings.py 文件中的 ROOT_URLCONF</p>
+
+<p>#TODO使用虚拟目录部署</p>
+
+<p><h2>配置 Django project 中的静态资源 css js jpg 等</h2>通过阅读他人的源码，把这个问题也明白了。传说 Django 不建议在 settings 设置 MEIDA_ROOT 等相关静态文件配置。那么我们在模板中如何使用这些文件呢。如，在模板中我们使用 /media/css/layout.css ，web server怎么样才能知道这个路径在什么地方呢？
+当然，Django中提供了相应的解决办法:通过url映射。在urls.py中做一下设置
+urlpatterns += patterns(&ldquo;,
+      (r&rsquo;^media/(?P<path>.*)$&lsquo;, &lsquo;django.views.static.serve&rsquo;, {&lsquo;document_root&rsquo;:&rsquo;d:/templates/media&rsquo;}),
+)</p>
+
+<p>通过这样的映射，静态的资源的问题就解决了。:)</p>
+
+<p><h1>Django URL dispatcher</h1>1. project 级别的 url 调用 app 级别的url</p>
+
+<p>此处要注意的是，project url + app url 才是真正的url，所以写url的正则表达式时，注意^ $两个符号</p>
+
+<ol>
+<li>通过Url传递Get Request参数</li>
+</ol>
+
+<p>如果我们 detail(request, name) 的方法需要一个name参数，那么我们的正则表达式应该这样写 (r&rsquo;^detail/P&lt;?name&gt;w+$&lsquo;, &lsquo;detail&rsquo;)</p>
+
+<ol>
+<li>快捷调用 view
+在appproject.views中有个index方法 在patterns 中第一个参数指定view后，在以后的调用只需指定方法名即可
+urlpatterns = patterns(&lsquo;appproject.views&rsquo;,
+  (r&rsquo;^$&lsquo;, &lsquo;index&rsquo;),
+)</li>
+</ol>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+

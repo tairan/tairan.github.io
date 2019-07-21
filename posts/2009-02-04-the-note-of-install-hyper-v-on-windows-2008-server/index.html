@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<title>The note of install Hyper-V on Windows 2008 Server | Tairan&#39;s Story</title>
+
+<link rel="stylesheet" href="https://tairan.net//css/styles.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" 
+integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/zenburn.min.css" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="https://tairan.net//js/highlight.js"></script>
+
+
+
+
+
+
+<div class="container">
+    <nav class="navbar level">
+      <div class="navbar-brand">
+          <a class="nav-item" href="https://tairan.net/"><h1 class="title is-3">Tairan&#39;s Story</h1></a>
+      </div>           
+      <div class="navbar-menu has-text-centered is-active">
+          <div class="navbar-end is-centered">
+              
+                <a href="https://tairan.net/about.html" rel="me">
+                  <span class="icon">
+                    <i class="fas fa-info"></i>
+                  </span>
+                </a>
+              
+                <a href="https://github.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                </a>
+              
+                <a href="https://www.linkedin.com/in/tairan/" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                  </span>
+                </a>
+              
+                <a href="https://twitter.com/tairan" rel="me">
+                  <span class="icon">
+                    <i class="fab fa-twitter"></i>
+                  </span>
+                </a>
+              
+           </div>
+      </div>
+    </nav>
+  </div>
+
+<div class="container">
+  <h2 class="subtitle is-6">February 4, 2009</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">The note of install Hyper-V on Windows 2008 Server</h1>
+  <div class="content">
+    <h1>Windows 2008 Server 上安装和使用 Hyper-V 笔记</h1>
+
+<p>安装 Hyper-V 有几个硬性要求
+1. CPU 支持 Virtualization
+2. 宿主操作系统需要是 64bit</p>
+
+<p>在安装过程中有几个需要注意的地方
+1. 宿主操作系统的Location必须是United States的，否则 Hyper-V Virtual Machine Management Service不能启动
+2. 如果CPU 支持 Virtualization 却不能启动 Guest 操作系统，那么需要检查主板BIOS中是否将 Virtualization 打开，BIOS已经打开也不行的话，那么升级下BIOS就可以了。我的 HP dc5750 就是升级到最新的BIOS才行的</p>
+
+<p>Hyper-V Guest 操作系统的支持
+Hyper-V 和 VPC Server 相比是明确提出支持 Linux 的，可这并不代表所有的 Linux 发行版都能不错的运行在 Hyper-V 上面。下面是 Microsoft 提供的支持 Linux 列表，更多的支持访问 <a href="http://www.microsoft.com/windowsserver2008/en/us/hyperv-supported-guest-os.aspx">http://www.microsoft.com/windowsserver2008/en/us/hyperv-supported-guest-os.aspx</a>
+<pre>
+Linux Distributions (VMs configured with 1 virtual processor only)
+      SUSE Linux Enterprise Server 10 with Service Pack 2 x86 Edition
+      SUSE Linux Enterprise Server 10 with Service Pack 2 x64 Edition
+      SUSE Linux Enterprise Server 10 with Service Pack 1 x86 Edition
+      SUSE Linux Enterprise Server 10 with Service Pack 1 x64 Edition
+</pre></p>
+
+<p>经过多个发行版安装测试，<span style="background-color:yellow">Ubuntu 8.10, Slackware 12.2, CentOS 5 是无法安装的</span>。ArchLinux 倒是可以不错的运行在 Hyper-V 上面。
+安装 Linux 时需要注意的是，网络设备需要使用 <span style="background-color:yellow">Legacy Network Adapter</span></p>
+
+<p>总结
+Hyper-V 比 Virtual PC Server 是一个很大的进步，在实际中使用 Hyper-V 还有很长的路要走，Hyper-V 支持的 Guest 系统都好贵，而且 Hyper-V 本身就只能在一个很贵的 Windows 2008 Server 上使用！还是使用 Linux 作为 Host 划算，而且更自由！</p>
+
+  </div>
+</div>
+<div class="container has-text-centered">
+    
+</div>
+
+<div class="container has-text-centered">
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      (function() {
+          
+          
+          if (window.location.hostname == "localhost")
+              return;
+      
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          var disqus_shortname = 'tairan';
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com/" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+</div>
+<section class="section">
+  <div class="container has-text-centered">
+    <p>&copy; Copyright 2019 Tairan Wang</p>
+  </div>
+</section>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-5226610-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
