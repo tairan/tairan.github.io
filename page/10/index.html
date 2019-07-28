@@ -70,6 +70,30 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Dec 26</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-12-26-remote-control-via-gtalk-xmpp/">Remote Control via GTalk (XMPP)</a></h1>
+          <div class="content is-hidden-mobile">
+            想远程控制家里的电脑？却因IP地址动态分配(花生壳可以解决)，远程连接速度慢，机器暴露在外网怕不安全，等种种原因无法理想的实现。
+现在我们就另辟蹊径使用Gtalk来远程控制家里的电脑
+基本思路如下 Gtalk基于XMPP这个开放的协议。那么我们也基于XMPP协议开发一个客户端就可以和Gtalk进行通讯，可以发送和接收来自Gtalk的消息后，再进行扩展，做成一个shell(命令解释器)。当我们用Gtalk给客户端发送消息后，客户端接收消息进行解释并处理。这样就完成了远程控制的家里电脑的任务。
+具体实现 本人才采用的是.NET技术，使用agsXMPP这个开源的封装了XMPP协议的类库。我们基于这个类库就可以和Gtalk通讯了。 下面附上源码，这里只是实现使用Gtalk发送消息，客户端接收到消息后自动将接收的消息再发送回去。
+using System;using agsXMPP;using …
+            
+            <br>
+            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2008-12-26-remote-control-via-gtalk-xmpp/">
+            <span class="icon-link is-small" style="line-height: 100%">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </span>
+              <p style="padding:0 5px"></p>more</p>
+            </a>
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Dec 22</h2>
         </div>
         <div class="column">
@@ -220,23 +244,6 @@ VIM 文档
               </span>
               <p style="padding:0 5px"></p>more</p>
             </a>
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">Nov 14</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-11-14-encoding/">你的网站还在用GB2312?</a></h1>
-          <div class="content is-hidden-mobile">
-            最近朋友在导入数据数据的时候出现了很多的方块，显然这是一个编码错误的问题。
-这让我想起目前国内网站的一些情况，国内山寨网挺多，基本上站还都是使用GB2312作为默认编码，GB2312，看名字就很有中国特色，不过，像这种基础设置，还是不要做山寨版的好。全球是一家&ndash;地球村！当前UTF-8很好很强大。
-UTF-8现在是主流的宽字符集的解决方案，不仅是网站，现在很多源码，文本，xml等都使用UTF-8作为默认编码。
-在使用 UTF-8 时需要注意的是 BOM : Byte Order Mark
-UTF-8 BOM又叫UTF-8 签名,其实UTF-8 的BOM对UFT-8没有作用,是为了支援UTF-16,UTF-32才加上的BOM,BOM签名的意思就是告诉编辑器当前文件采用何种编码,方便编辑器 识别,但是BOM虽然在编辑器中不显示,但是会产生输出,就像多了一个空行
-我们在编辑UTF-8文 …
             
           </div>
       </article>

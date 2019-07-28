@@ -70,6 +70,23 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Aug 6</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-08-06-vim/">Vim</a></h1>
+          <div class="content is-hidden-mobile">
+            VIM 学习笔记
+设置文件模板，通常使用两种设置文件模板的方法 在使用这两种方法之前都必须打开文件类型识别
+filetype plugin indent on
+ 从模板文件中加载  autocmd BufNewFile *.py 0r $VIM/vimfiles/templates/python.tpl
+文件必须存在，这里使用的是Windows版本的默认目录结构
+ 通过程序来设置文件中的模板 autocmd BufNewFile.py &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &lt;/span&gt;callsetline(1,&#39;#!/usr/bin/python&#39;)| …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Jul 30</h2>
         </div>
         <div class="column">
@@ -217,26 +234,6 @@ In the repository folder on the server, there&rsquo;s a sub-folder hooks which c
 setenv HTTP_PROXY xxx.xxx.xxx.xxx:portsetenv FTP_PROXY xxx.xxx.xxx.xxx:port 这里只能只能使用IP地址。
 BASH 的设置如下
 expor HTTP_PROXY=http://proxy.host.url:port btw： 经过几次安装FreeBSD实战后，慢慢对FreeBSD有些认识了。继续努力！
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">Jun 26</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-26-sc-is-service-control/">使用SC创建/删除Windows Services</a></h1>
-          <div class="content is-hidden-mobile">
-            DESCRIPTION:SC is a command line program used for communicating with theService Control Manager and services.&lt;br /&gt;USAGE:sc [command] [service name] ...&lt;br /&gt;&lt;br /&gt;The option has the form &#34;ServerName&#34;Further help on commands can be obtained by typing: &#34;sc [command]&#34;Commands:query-----------Queries the status for a service, orenumerates the status for types …
-            
-            <br>
-            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2008-06-26-sc-is-service-control/">
-            <span class="icon-link is-small" style="line-height: 100%">
-                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-              </span>
-              <p style="padding:0 5px"></p>more</p>
-            </a>
             
           </div>
       </article>

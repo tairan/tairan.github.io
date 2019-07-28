@@ -70,6 +70,21 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">May 28</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2010-05-28-shared-by-simplehttpserver/">快速建立HTTP Server共享文件</a></h1>
+          <div class="content is-hidden-mobile">
+            Python内置了一个简单的Web服务器可以用来建立一个HTTP Server来共享某个目录下的文件，尤其是在Unix-Like+windows的混合网络中更是方便快捷。
+Server 假设 IP 为 192.168.1.1
+首先进入到需要共享的目录，如 cd ~/share/ 
+python -m SimpleHTTPServer 8000 #Python 2.6  OR python -m http.server 8000 #Python 3.0  Client 访问http://192.168.1.1:8000就可以看到Server共享出来的文件了。
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Apr 16</h2>
         </div>
         <div class="column">
@@ -222,27 +237,6 @@ Drupal 支持主题(Theme)和模块插件(Module)，如此一来给网站换马�
             
             <br>
             <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2009-11-23-setup-drupal/">
-            <span class="icon-link is-small" style="line-height: 100%">
-                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-              </span>
-              <p style="padding:0 5px"></p>more</p>
-            </a>
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">Nov 22</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2009-11-22-using-the-swap-file/">在linux上使用swap文件</a></h1>
-          <div class="content is-hidden-mobile">
-            作为个人用户，为swap分一个磁盘分区有些浪费，其实我们可以使用swap file来替代swap 分区，而且还可以很方便的调整swap file文件的大小。
- To add a swap file: 1. Determine the size of the new swap file and multiple by 1024 to determine the block size. For example, the block size of a 64 MB swap file is 65536. 2. At a shell prompt as root, type the following command with count being equal to the desired block size: dd if=/dev/zero of=/swapfile bs=1024 …
-            
-            <br>
-            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2009-11-22-using-the-swap-file/">
             <span class="icon-link is-small" style="line-height: 100%">
                 <i class="fa fa-angle-double-right" aria-hidden="true"></i>
               </span>

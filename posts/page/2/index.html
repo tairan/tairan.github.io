@@ -67,6 +67,25 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
   <main class="container">
       
       
+      <h1 class="title is-3">2011</h1>
+      
+      <article class="columns">
+        <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Feb 24</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2011-02-24-how-to-deploy-django-app-on-alwaysdata/">如何在Alwaysdata上部署Django应用</a></h1>
+          <div class="content is-hidden-mobile">
+            Alwaysdata是一个法国的ISP，提供相当不错的VPS，共享主机等服务，而且免费的项目也相当的好，可惜你需要在墙外才能享受到如此高档的服务。
+在Alwaysdata的wiki上已经详细说明了如何部署Django的应用，但是如果一丝不苟的依葫芦画瓢你未必能一次成功，因为这篇文档还遗漏了一点。
+你还需要在project的根目录中放一个.htaccess 如下
+project |-- apps |-- public |-- django.fcgi |-- .htaccess |-- .htaccess |-- settings.py |-- manage.py  而这个 .htaccess 的内容是：
+AddHandler fastcgi-script .fcgi RewriteEngine On RewriteCond %{REQUEST_FILENAME} !-f …
+            
+          </div>
+      </article>
+      
+      
       <h1 class="title is-3">2010</h1>
       
       <article class="columns">
@@ -216,21 +235,6 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
 接下来我们从那里开始呢？
 在动手练习之前，需要阅读文档。先哲说：闲时读手册，忙时问Google。刚开始我们有充裕的时间，那么开始阅读文档吧。
 作为入门，属于Getting Started的文档需要优先阅读。通过阅读What is Kohana?，来了解下Kohana都有哪些东西。而 Model View Controller则告诉你Kohana使用了一种改良型的MVC模式。接下来 Cascading Filesystem 告诉你这个改良型的MVC模式是怎么工作的。最后通过阅读Request Flow来了解从浏览器发出请求后Kohana在服务器端是怎么处理的。okay，通过阅读以上的文 …
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">May 28</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2010-05-28-shared-by-simplehttpserver/">快速建立HTTP Server共享文件</a></h1>
-          <div class="content is-hidden-mobile">
-            Python内置了一个简单的Web服务器可以用来建立一个HTTP Server来共享某个目录下的文件，尤其是在Unix-Like+windows的混合网络中更是方便快捷。
-Server 假设 IP 为 192.168.1.1
-首先进入到需要共享的目录，如 cd ~/share/ 
-python -m SimpleHTTPServer 8000 #Python 2.6  OR python -m http.server 8000 #Python 3.0  Client 访问http://192.168.1.1:8000就可以看到Server共享出来的文件了。
             
           </div>
       </article>

@@ -4,18 +4,23 @@
   
   <url>
     <loc>https://tairan.net/posts/</loc>
-    <lastmod>2019-07-21T12:28:12+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://tairan.net/tags/</loc>
-    <lastmod>2019-07-21T12:28:12+08:00</lastmod>
+    <lastmod>2019-07-28T08:30:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://tairan.net/</loc>
+    <lastmod>2019-07-28T08:30:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/posts/2019-07-28-into-the-wild/</loc>
+    <lastmod>2019-07-28T08:30:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tairan.net/tags/</loc>
     <lastmod>2019-07-21T12:28:12+08:00</lastmod>
     <priority>0</priority>
   </url>

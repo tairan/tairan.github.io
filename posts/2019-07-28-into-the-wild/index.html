@@ -6,7 +6,7 @@
 
 
 
-<title>使用 Go 调用 Windows API | Tairan&#39;s Story</title>
+<title>荒岛生存 | Tairan&#39;s Story</title>
 
 <link rel="stylesheet" href="https://tairan.net//css/styles.css">
 
@@ -63,91 +63,26 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
   </div>
 
 <div class="container">
-  <h2 class="subtitle is-6">April 15, 2012</h2>
-  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">使用 Go 调用 Windows API</h1>
+  <h2 class="subtitle is-6">July 28, 2019</h2>
+  <h1 class="subtitle is-size-4-mobile is-size-3-desktop">荒岛生存</h1>
   <div class="content">
-    <p>Go 通过 <a href="http://golang.org/cmd/cgo/">cgo</a> 可以利用现有C语言库</p>
+    <p>周末在家打开B站客户端，然后就停不下来了。连续看了3场荒岛生存的视频，一个老外的，一个中国小哥，一个中国小妹。</p>
 
-<p>例如在 Windows 中使用 Go 调用 Win32 API</p>
+<p>贝爷的野外生存节目名声在外，但跟普通人似乎有些遥远，总觉得贝爷的是野外生存教学片。而这三个荒岛生存的vlog，看着更接地气一些，虽然跟普通人还是有点远。</p>
 
-<p>首先安装必要的工具</p>
+<p>老外的名字叫信誓蛋蛋，在国内很火，节目中90%的中文对白，简直就是为中国观众打造的。在这三组节目中，信誓蛋蛋的专业技能是最好的，制作各种生存工具，除了实用之外，还很美观，编的草席，简直就是艺术品。加上钢弹的身材实力圈粉，虽然比贝爷贴近了一些人民群众，但还是有些遥远。</p>
 
-<ol>
-<li><a href="http://golang.org">Go</a></li>
-<li><a href="http://mingw.org">MingW</a></li>
-</ol>
+<p>中国小妹是曹导导，选择了跟信誓蛋蛋同一个岛屿，不过她就是来打酱油的，带着专业的装备，但是基本上都没有发挥什么作用，各种挑战都是以失败告终，看似一个独立女性，实际则是富家子弟，来模仿一下名人，体验生活来的。中国人、女生、这几个标签还是很吸引眼球的。</p>
 
-<pre><code class="language-bash">%GOPATH%
-    +- src
-        +- w32api
-            +- kernel.go
-        +- testapp
-            +- main.go
-    +- bin # go install testapp
-        +- testapp.exe
-    +- pkg # go install w32api
-        +- windows_386
-    +- testapp.exe
-</code></pre>
+<p>中国小哥是探索兄弟，颜值并不高，装备简直业余，求生的荒岛也并不是什么远在太平洋的某地，而是海南某个无人居住的小岛。探索兄弟，有两次荒岛求生，都是在一个被当地人遗弃的小岛上，充满了垃圾，每日生存就是利用这些垃圾和野外的资源。</p>
 
-<p>包装 Windows API</p>
+<p>这三组节目里面我最喜欢的是探索兄弟，在节目里，平直地讲述每日的故事，很真诚。</p>
 
-<pre><code class="language-golang">package w32api
+<p>三组节目看下来，一天就没了。</p>
 
-// #define WIN32_LEAN_AND_MEAN
-// #include &lt;windows.h&gt;
-import &quot;C&quot;
-import &quot;syscall&quot;
+<p>看视频的时候总想着把自己带入进去，喜欢看探索兄弟，也是因为似乎是可以把自己带入进去，想去一个无人岛，在岛上住上一个月，不是去求生，而是带上一个背包的装备，在野外，安静的待上一段时间。都市的生活每天都像机器一样，over and over again，不得停息。</p>
 
-func GetCurrentDirectory() string {
-    if bufLen := C.GetCurrentDirectoryW(0, nil); bufLen != 0 {
-            buf := make([]uint16, bufLen)
-            if bufLen := C.GetCurrentDirectoryW(bufLen, (*C.WCHAR)(&amp;buf[0])); bufLen != 0 {
-                        return syscall.UTF16ToString(buf)
-            }
-        }
-    return &quot;&quot;
-}
-</code></pre>
-
-<p>*注意*：</p>
-
-<p>在 import &ldquo;C&rdquo; 和 // #include <windows.h> 之间不能有空行</p>
-
-<p>编译并安装</p>
-
-<pre><code class="language-bash">go build w32api
-go install w32api
-</code></pre>
-
-<p>调用</p>
-
-<pre><code class="language-golang">package main
-
-import &quot;w32api&quot;
-
-func main() {
-    println(w32api.GetCurrentDirectory())
-}
-</code></pre>
-
-<pre><code class="language-bash">go build testapp
-go install testapp
-</code></pre>
-
-<p>###Troubleshooting
-* can&rsquo;t load package: package w32api: import &ldquo;w32api&rdquo;: cannot find package</p>
-
-<p>原因是没有设置环境变量 GOPATH</p>
-
-<ul>
-<li>exec gcc: exec: &ldquo;gcc&rdquo;: executable file not found in %PATH%</li>
-</ul>
-
-<p>原因是 gcc 所在目录没有加入道 %PATH% 中，检查 MingW 是否正确安装，并将 bin 目录加入到环境变量 %PATH% 中</p>
-
-<p>###参考
-<a href="http://www.cnblogs.com/AllenDang/archive/2012/02/21/2361197.html">使用CGO封装Windows API</a></p>
+<p>也许，实际上并不会有那么长时间，也不一定有机会，不过可以从小事情做起，开始做些运动，周末出去走走。</p>
 
   </div>
 </div>
