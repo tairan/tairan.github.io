@@ -70,6 +70,20 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Aug 7</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-08-07-jottings/">杂记</a></h1>
+          <div class="content is-hidden-mobile">
+            我们可爱的人民公仆，他们是在掩耳盗铃？总是限制着我们，难道整个国家都要做愚民吗？
+今天终于把自己的域名转接到了Blogger上了，Google官方的设置说明需要变得有中国特色才行，通过Google找到了几个ip，作为自己域名的A记录地址才可以用过 http://blog.tairan.org 访问我的blog. CName 设置是不顶事咯，如果你也需要Google一把，准能有不错的收获。
+今天还动手做了一次 SVN 版本库的同步 使用 svnsync 命令。目前只支持单向同步。这意味着写操作都要到提交到主版本库，正常的话，一定是看得比写的多，所以这种方式能满足要求。具体同步步骤如下 1. 创建一个新的空版本库，as 从版本库 2. 在从版本库的hook目录中建立一个空的文件, pre-revprop-change.bat 3. C:&gt;svnsync init 从版本库URL 主版本 …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Aug 6</h2>
         </div>
         <div class="column">
@@ -219,21 +233,6 @@ In the repository folder on the server, there&rsquo;s a sub-folder hooks which c
               </span>
               <p style="padding:0 5px"></p>more</p>
             </a>
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">Jun 30</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-06-30-freebsd-proxy-settings/">FreeBSD设置代理</a></h1>
-          <div class="content is-hidden-mobile">
-            FreeBSD设置代理, 在FreeBSD中默认安装的是CSH，所以设置代理时应该使用 setenv
-setenv HTTP_PROXY xxx.xxx.xxx.xxx:portsetenv FTP_PROXY xxx.xxx.xxx.xxx:port 这里只能只能使用IP地址。
-BASH 的设置如下
-expor HTTP_PROXY=http://proxy.host.url:port btw： 经过几次安装FreeBSD实战后，慢慢对FreeBSD有些认识了。继续努力！
             
           </div>
       </article>

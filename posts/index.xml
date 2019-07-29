@@ -7,10 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
-    <lastBuildDate>Sun, 28 Jul 2019 08:30:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 29 Jul 2019 22:27:08 +0800</lastBuildDate>
     
 	<atom:link href="https://tairan.net/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git 最佳实践</title>
+      <link>https://tairan.net/posts/2019-07-29-git-best-practices/</link>
+      <pubDate>Mon, 29 Jul 2019 22:27:08 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2019-07-29-git-best-practices/</guid>
+      <description>长话短说，仓库内部采用 Git flow 模式，仓库之间采用 GitHub flow模式。
+因为Git是一个分布式仓库，所谓分布式仓库就是每个仓库都是独立、平等的个体。所谓仓库内部，指的是某一个仓库内部，而仓库之间，则是指的是采用fork的方式建立的多个仓库之间。
+开始之前需要先了解下什么是Git flow什么又是GitHub flow。
+ Git flow
+ GitHub flow
+  这两个不是谁替代谁的关系，而是他们适用的场景不一样，Git flow专注的是软件发布模型，作为一个商业软件，只有一个master分支是远远不够的，因为你的用户不太可能都采用同样的版本，并且在有新版本后统一更新，即使是互联网只有服务器端的项目也会面临组织内部不同服务之间的版本依赖问题。因此，遵循Git flow的建议，辅以Git flow extensions在仓库内部维护完整的分支和Tag，如同它文档标题一样，这样的分支模型会让你达到成功的彼岸。
+而GitHub flow模型关注的则是协作，抛开个人solo的项目，每个项目都会面临协作的问题。此时，一个直观的想法是给其他人开放Developer权限，这里告诉你千万不要这样干，尤其是在这个人没有经过专业训练的前提下。正确的姿势应该是，Fork -&amp;gt; Pull Request -&amp;gt; Merge。 Git是一个分布式的仓库，应该按照分布式的思维方式来工作，合作应该是仓库和仓库之间的事情。这种分布式的思维应该运用在每个Git仓库中，GitHub上的仓库和你本地的仓库，即使都是你的，并且都是你一个人在维护，那么也需要把它理解为这是两个仓库，在维护过程中你要扮演两个角色，一个是Developer，将代码clone到本地之后，采用Git flow的模式进行工作。然后再扮演另一个Master的角色，来维护Github那个。
+So, 在真实的工作中我们应该将这两者结合起来。
+从一个主仓库开始，就像Linux Kernel那样，Linus维护的仓库就是主仓库。理论上，每个Linux Kernel仓库都是独立的个体，但是大家还是以Linus发布的为准。那么在这个主仓库里，则使用Git flow的模式来进行维护。通常来说，主要是作为发布管理。
+那么其他从主仓库Fork出去的仓库，若还有下游的开发者，那么可以把当前仓库作为主仓库，让下游进行Fork。
+最最最下游的仓库，其实就是开发人员干活的地方了，此时在仓库内部也是遵循Git flow模式，于此同时养成一个习惯，修改代码之前先创建一个分支。如Git flow的命令：git flow feature start new-feature。当然，具体的操作还需要根据实际工作来创建分支，比如Hotfix，Service Pack等。
+接下来就是仓库之间的协作了，理想情况下，每个开发人员都应该有自己独立的仓库。在自己独立仓库里进行工作，当工作完成以后需要合并到上游时，这时候就可以使用GitHub flow模式了：Pull Request 。
+印象中，在Git早期，Linus提出了 一个概念：Do not push to me, I will pull from you. 作为一个很强势、对技术门儿清的领导，的确可以按照他思路来，下游仓库各项数据指标都不错，那就赶紧把它集成到上游主仓库，这样做的好处是能尽量避免下游版本分叉。
+当然，作为一个商业组织内部，行政的力量更大，定好了前进的目标后，下游自然会在约定时间将自己的工作成功合并到上游。
+使用GitHub flow时会遇到一个上下游集成的问题，Pull Request是向上游集成，而多个团队之间协作时，下游团队在日常工作中还要经常从上游进行集成其他团队的代码。此时，可以参考GitHub的官方两篇文档
+ Configuring a remote for a fork Sycning a fork  最后，在一个成熟的开发团队中，仅仅使用GitHub flow模式还是不够的，还应该再配合相应的持续集成流程，以保证代码质量，当一个Pull Request没有通过持续集成中的测试时，则不允许合并到上游。</description>
+    </item>
     
     <item>
       <title>荒岛生存</title>

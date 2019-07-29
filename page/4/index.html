@@ -70,6 +70,29 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Nov 23</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2009-11-23-setup-drupal/">Drupal</a></h1>
+          <div class="content is-hidden-mobile">
+            Drupal是一个出色的开源CMS系统，Whithouse也在使用。 现在把我今天配置Drupal的时候遇到一些问题以及解决办法记录在此，备查。
+软件版本信息 Windows7 IIS7 + FastCGI php-5.3.1-nts-Win32-VC9-x86 drupal-6.14
+在PHP官方文档中提供了IIS7如何使用FastCGI配置PHP，需要注意的是当启用php.ini-development作为php.ini配置环境时，在CGI部分默认的是无法工作的，需要做如下修改 cgi.force_redirect = 1 cgi.nph = 0 cgi.fix_pathinfo = 1 fastcgi.impersonate = 0 fastcgi.logging = 1 cgi.rfc2616_headers = 0 
+在php.ini文件中需要启用的 extension …
+            
+            <br>
+            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2009-11-23-setup-drupal/">
+            <span class="icon-link is-small" style="line-height: 100%">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </span>
+              <p style="padding:0 5px"></p>more</p>
+            </a>
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Nov 22</h2>
         </div>
         <div class="column">
@@ -225,28 +248,6 @@ Copyright © 2001 by Eric S. Raymond
 写文章其实不在于你是否有很多技巧，而是你到底有什么内容要说。没有内容，即使写作技巧再好，写出来的东西也只是塞满纸张的垃圾。
 通常一篇文章会有个中心思想，这是文章的魂。
 在漫无边际的思考中需要很大的毅力才能将思绪整理好，此时我们最好借助一些外部 …
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">Sep 16</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2009-09-16-management-for-your-mind/">管理你的知识</a></h1>
-          <div class="content is-hidden-mobile">
-            我是这样来管理自己的知识的
-文章，备忘录，联系人，文档，常用软件的配置文件，一些自动化脚本。
-知识要保存
-外在的形式一定会变
-最佳格式不是 word, 更不是PDF， 而是文本格式 TEXT
-TEXT是完美的中间格式
-格式化你的文本 reStructuredText DocBook Troff TeX
-利用版本控制工具来管理这些文本， 什么东西该放进仓库，什么东西不该放进去？
-找个地方来保存仓库，如果不是涉及隐私，就放在Google上吧。“保存文件最好的方式就是把它放在一个公开的地方，让全世界的人去镜像” &ndash; Linus
-本地保存，则需要定期备份。
-写一些脚本来生成最终发布版本
             
           </div>
       </article>

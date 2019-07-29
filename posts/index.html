@@ -71,6 +71,31 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jul 29</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2019-07-29-git-best-practices/">Git 最佳实践</a></h1>
+          <div class="content is-hidden-mobile">
+            长话短说，仓库内部采用 Git flow 模式，仓库之间采用 GitHub flow模式。
+因为Git是一个分布式仓库，所谓分布式仓库就是每个仓库都是独立、平等的个体。所谓仓库内部，指的是某一个仓库内部，而仓库之间，则是指的是采用fork的方式建立的多个仓库之间。
+开始之前需要先了解下什么是Git flow什么又是GitHub flow。
+ Git flow
+ GitHub flow
+  这两个不是谁替代谁的关系，而是他们适用的场景不一样，Git flow专注的是软件发布模型，作为一个商业软件，只有一个master分支是远远不够的，因为你的用户不太可能都采用同样的版本，并且在有新版本后统一更新，即使是互联网只有服务器端的项目也会面临组织内部不同服务之间的版本依赖问题。因此，遵循Git flow的建议，辅以Git flow extensions在仓库内部维护完整的分支和Tag，如同它文档标题 …
+            
+            <br>
+            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2019-07-29-git-best-practices/">
+            <span class="icon-link is-small" style="line-height: 100%">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </span>
+              <p style="padding:0 5px"></p>more</p>
+            </a>
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Jul 28</h2>
         </div>
         <div class="column">
@@ -241,20 +266,6 @@ INSTALL
           <div class="content is-hidden-mobile">
             规矩是无处不在的，使用工具也有使用工具的规矩，就像你不能拿个榔头去拧螺丝一样。 就算是软件也有其使用的规矩， 经常看到有人抱怨某个软件怎么样的难用，其实大多数情况下他是用使用其他软件的习惯去使用另一个软件，也就是因为没有遵守使用此软件的规矩而带来的诸多不便。当然也有极少部分的软件真的很难用，那么就打破规矩，重新建立一个。
 举几个例子， Windows 上的软件管理，如果不用第三方的软件管理工具的话，那么使用MSI安装，卸载就是它的规矩。 Debian/Ubuntu 则是 apt-get 进行软件的管理，如果你使用咒语的话 ./configure &amp; make &amp; make install 那么就要自己去管理软件的诸多文件。 Mercurial 如果你要删除或者移动文件那么就使用 hg rm / hg mv 的命令来做，而不是直接的 rm / mv
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">Mar 26</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2011-03-26-is-first-run/">如何判断程序是安装后第一次执行</a></h1>
-          <div class="content is-hidden-mobile">
-            有时我们需要在程序第一次启动的时候进行一些初始化工作，如何识别程序是部署后第一次运行呢？ .net framework就提供了这样的功能。
-参考这里 http://msdn.microsoft.com/zh-cn/library/system.deployment.application.applicationdeployment.isfirstrun.aspx 
-这里还有更多的关于.net 程序部署相关的技术说明 。http://msdn.microsoft.com/zh-cn/library/system.deployment.application.aspx
             
           </div>
       </article>
