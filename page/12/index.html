@@ -70,6 +70,23 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Oct 20</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-10-20-iis-fastcgi/">IIS &amp; FastCGI</a></h1>
+          <div class="content is-hidden-mobile">
+            Blog 自从搬家到 PHP5ISAPI + IIS + Windows 平台上以来，竟然让服务器宕机多次。查看event log 也没有发现到什么可疑信息。在PHP manual提到以下信息: If you experience 100% CPU usage after some time, turn off the IIS setting Cache ISAPI Application. 
+关于这个选项，反复设置可还是出现宕机的情况。看来ISAPI不是那么的可靠。但在IIS上，用什么方式才是PHP的最佳？
+FastCGI，Microsoft说这个可以提升PHP在Windows的性能xx倍！稳定性也好！东家这么使劲的鼓吹这玩意，总有一定的道理。实践出真知，先用上再说！
+果然，一天下来没再见到Windows宕机。验证的时间是短了点，但是总还是给我带来了欣喜。
+参考资料:
+配置FastCGI …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Oct 16</h2>
         </div>
         <div class="column">
@@ -200,21 +217,6 @@ subversion 是一个CS结构的版本管理工具，所以我需要一个稳定�
           <div class="content is-hidden-mobile">
             你要了解游戏规则， 你要了解语言的规则， 你要了解系统的规则， 你要了解计算机运作的规则， &hellip;&hellip;
 要了解很多才行，事实上没有人能完全了解所有，这也是人与人之间的差异所在! 尽可能多的去了解兴趣所在的领域吧! Enjoy!
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">Sep 3</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-09-03-google-chrome/">Google Chrome 第一天体验</a></h1>
-          <div class="content is-hidden-mobile">
-            google 终于推出浏览器了，试想google的大部分应用都是通过浏览器操作的，怎么能让自家命脉捏在别人手上？ 如今满天飞的浏览器，google chrome 又能给大家带来什么？
-google 其实还是很霸道的(不霸道如何跟更强悍的microsoft抗争，不霸道怎么能降服如此之多的电脑菜鸟？哈哈)，google chrome 的安装是一步到位，不给你任何选择的余地，默认安装在C盘。(还好根据以往经验C盘绝对是足够的大)
-早在昨天就通过新闻和google blog了解了下google chrome，当启动google chrome以后还是掩饰不住对它简洁风格的喜爱。那是一个漂亮 ^_^。
-今天是在公司初体验google chrome的，这个不刚使用就发现个有个地方让人无法忍受。我们公司的网络环境是这样的, ISA Server 把关，客户端使用代理上网。如果把网络连接设置为自动检测代 …
             
           </div>
       </article>

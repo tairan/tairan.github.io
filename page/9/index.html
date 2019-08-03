@@ -70,6 +70,23 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Mar 14</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2009-03-14-the-ide-is-good-or-evil/">The IDE is good or evil?</a></h1>
+          <div class="content is-hidden-mobile">
+            从Java世界的eclipse，netbeans到.NET世界的Visual Studio(VSTS), IDE的很多强大的功能为我们的开发带来了不少的便利，但有时候IDE也给我们带来了很多的烦恼，比如当没有IDE支持的时候，有些人竟然会写不出代码。这到底是IDE好还是坏？
+首先可以肯定的一点是 IDE 是用来提高工作效率的。但他不能代替你去思考。所以在使用IDE这些便利的功能时，需要对IDE有一定的认识。
+比如 IDE 是通过什么方式来帮我们管理源代码，以及如何知道我们的编译顺序的。 IDE 是根据什么方式来进行智能提示的？ 为什么IDE可以协助我们进行debug？
+现在IDE的智能提示很强大，而我们在使用智能提示之前是不是先要清楚每个对象是干什么的？对象里面的方法属性是干嘛的？
+如果离开了智能提示，就不知道该怎么写代码，那么即使写出的代码也靠不住。
+在学习阶段还是多用文本编辑 …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Mar 10</h2>
         </div>
         <div class="column">
@@ -215,18 +232,6 @@ Windows 7 的最小需求还是蛮大的，开始分配的256M内存是无法安
 首先要分区，格式化。(fdisk, mkfs.xfs)。目前GRUB也支持XFS文件系统启动了
 挂载分区 mkdir /tmp/hda mount /dev/hda1 /tmp/hda  安装 grub-install &ndash;recheck &ndash;root-directory=/tmp/hda /dev/hda 
 注意: 如果不挂载分区，我这里会提示，不知道其他人有没有遇到这个情况 grub-install does not …
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">Jan 7</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2009-01-07-multisystem-boot-via-grub/">Multisystem boot via GRUB</a></h1>
-          <div class="content is-hidden-mobile">
-            以前安装多系统(Linux®+Windows®)都是在一个硬盘上，先安装Windows后安装Linux，然后使用GRUB (or LILO)来引导系统。 如今生活富裕了，硬盘也多了起来，为了更方便的重装系统。我把Linux®和Windows®分别安装在不同的硬盘上。这时就不用严格限制安装系统谁先谁后了。(其实不是Windows®是笨，而是故意不支持通用引导) 硬盘物理连接结构如下 hdd0 &ndash; Primary IDE 安装 Linux hdd2 &ndash; Second IDE 安装Windows 为什么不在同一根IDE线上安装硬盘呢？往下看 安装Linux并使用GRUB作为boot程序 进入BIOS，把 Primary IDE 设置为 Disable 安装Windows，此时Windows会将hdd2认作当前计算机中的Primary Disk，这样就会在hdd2的MDR创 …
             
           </div>
       </article>

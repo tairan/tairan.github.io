@@ -71,6 +71,28 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jul 3</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-07-03-some-notes-of-subversion/">一些关于Subversion的记录</a></h1>
+          <div class="content is-hidden-mobile">
+            强制用户写日志有两种方法可以防止用户在不写日志的情况下进行提交操作。一种方式只对TortoiseSVN有效，另外一种方法对任何Subversion的客户端都有效，但是需要直接访问服务器。
+服务器端的钩子脚本(Hook-script)如果能够直接访问服务器，可以安装一个pre-commit钩子脚本，通过这个脚本可以阻止所有空白日志或者日志太简短的提交操作。
+In the repository folder on the server, there&rsquo;s a sub-folder hooks which contains some example hook scripts you can use. The file pre-commit.tmpl contains a sample script which will reject commits if no log message …
+            
+            <br>
+            <a class="button is-marginless is-paddingless" href="https://tairan.net/posts/2008-07-03-some-notes-of-subversion/">
+            <span class="icon-link is-small" style="line-height: 100%">
+                <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+              </span>
+              <p style="padding:0 5px"></p>more</p>
+            </a>
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Jun 30</h2>
         </div>
         <div class="column">
@@ -231,20 +253,6 @@ demo
           </div>
       </article>
       
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">May 15</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-05-15-i-was-a-blogger-first-blog/">我在 blogger 的第一个Blog</a></h1>
-          <div class="content is-hidden-mobile">
-            每天自己都想了很多东西，但是很少有记录的，有时很好的一个idea，一觉醒来就全部忘记了。记忆出现了断层。
-现在就借助这个工具来记录一下吧，其实在网络上写blog也有很多的不方便，比如我在路上，或者暂时没有网络连接，再或者我想做一个学习笔记？
-all right, 这些总比没有强百倍。因为零到壹的难度比壹到一百的距离长万倍！
-            
-          </div>
-      </article>
-      
       
       
   </main>
@@ -266,7 +274,7 @@ all right, 这些总比没有强百倍。因为零到壹的难度比壹到一百
       <div class="level-right is-marginless">
         <div class="level-item">
           
-          <a class="button is-rounded" disabled>
+          <a class="button is-rounded" href="/posts/page/16/">
             Older
             <span class="icon is-small is-marginless">
               <i class="fa fa-angle-right"></i>
