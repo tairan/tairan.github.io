@@ -70,6 +70,24 @@ integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbi
       
       <article class="columns">
         <div class="column is-2">
+          <h6 class="is-inline" style="white-space: nowrap">Jan 8</h2>
+        </div>
+        <div class="column">
+          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2009-01-08-install-grub-using-grub-install/">Install GRUB using grub-install</a></h1>
+          <div class="content is-hidden-mobile">
+            用过GRUB以后才知道这个玩意的强大。GRUB加上各种Linux kernel，可以组合成各种启动和安装系统方式。 现在总结一下安装GURB。
+环境： Virtual Box #虚拟机 LFS-LiveCD #提供安装GRUB环境
+省略若干配置虚拟机的文字&hellip;
+我们需要在一块新磁盘上安装GRUB，这块磁盘在系统中为 /dev/hda
+首先要分区，格式化。(fdisk, mkfs.xfs)。目前GRUB也支持XFS文件系统启动了
+挂载分区 mkdir /tmp/hda mount /dev/hda1 /tmp/hda  安装 grub-install &ndash;recheck &ndash;root-directory=/tmp/hda /dev/hda 
+注意: 如果不挂载分区，我这里会提示，不知道其他人有没有遇到这个情况 grub-install does not …
+            
+          </div>
+      </article>
+      
+      <article class="columns">
+        <div class="column is-2">
           <h6 class="is-inline" style="white-space: nowrap">Jan 7</h2>
         </div>
         <div class="column">
@@ -222,20 +240,6 @@ VIM 文档
 用Python写一个简单的web application可不是那么容易的事情，以前玩了一段时间的Django，那时还不是1.0 Release版本。好不容易盼到Django 1.0 release了，却发现有很多东西不认识了。怎奈写一个小东东就这么难呢？
 寻寻觅觅，忽见web.py是一个更简洁的framework，so, 看文档，做练习。从下班一直捣鼓到此时22:55，发现web.py这个framework中还是有很多Bug的。
 官方释放版本是0.23，在cookbook中写到如何使用subapplication。 blog.py import web urls = ( &ldquo;&rdquo;, &ldquo;reblog&rdquo;, …
-            
-          </div>
-      </article>
-      
-      <article class="columns">
-        <div class="column is-2">
-          <h6 class="is-inline" style="white-space: nowrap">Nov 24</h2>
-        </div>
-        <div class="column">
-          <h2 class="subtitle is-inline is-size-4-mobile is-size-3-desktop"><a href="https://tairan.net/posts/2008-11-24-wangshouren/">王守仁</a></h1>
-          <div class="content is-hidden-mobile">
-            明新建文成侯王守仁，字伯安，自號陽明子。浙江餘姚人也，其先出王羲之之後，世為大戶。先祖綱，隨劉伯溫仕明太祖，官至四品，父華，成化十七年進士第一，仕至南京吏部尚書。娠十四月而生，祖母岑夫人夢神人送兒自雲中至，因名為雲。五歲，不能言，有異僧過之曰：「可惜道破。」始改今名。
-年十歲，通四書，能屬文，又好兵書，時人異之。年十五，縱觀塞外，遂立志為將，曰：「但有兵將數萬，吾當討平韃靼！」父聞焉，以其狂妄深責之。守仁沮，越數日，言父曰：「責甚是，吾改之，吾當為聖賢！」父以其年少，但一笑而已。後妻之以江西大戶，成禮日，唯不見守仁，亟尋竟夕，方得其於城外道觀，蓋因守仁前日過此，興大發，於此打坐，忘晝暮，眾人尋至，方憶婚事未了。
-弘治十二年登會試二甲，授工部主事，與李夢陽友，終日論文。初，守仁得朱子之道，深信之。曾對竹而格終日，以求究其理，不果，反染傷寒。朱子之說者，存天理去人欲也。理欲分之，而守仁於時亦以 …
             
           </div>
       </article>
