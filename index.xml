@@ -7,10 +7,25 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; Copyright 2019 Tairan Wang</copyright>
-    <lastBuildDate>Fri, 09 Aug 2019 19:00:00 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 11 Aug 2019 00:39:27 +0800</lastBuildDate>
     
 	<atom:link href="https://tairan.net/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Getting Start Java in China</title>
+      <link>https://tairan.net/posts/2019-08-11-getting-start-java-in-china/</link>
+      <pubDate>Sun, 11 Aug 2019 00:39:27 +0800</pubDate>
+      
+      <guid>https://tairan.net/posts/2019-08-11-getting-start-java-in-china/</guid>
+      <description>在中国国内的开发者有一项基本的技能必须要掌握，否则永远都是不入流的开发者。
+是什么技能那么重要呢？
+通常我会把这个技能简称为翻墙，但是这对某些来说似乎有些政治不正确，那么我们换个说法，就是如何搞定被墙的软件库。
+在大企业内工作的开发者，会享受着丰富的资源，更快的带宽、已经配置好的镜像库、甚至还有自动翻墙。但是在家工作，或者那些小团队是怎么活着的？
+这里记录一些Java相关开发所需要解决的问题，不完全记录。(For Windows only)
+ Maven  国内有不少镜像，目前使用阿里的多一些，在%USERPROFILE%\.gradle\init.gradle文件中配置阿里的镜像
+allprojects { repositories { def ALIYUN_REPOSITORY_URL = &#39;http://maven.aliyun.com/nexus/content/groups/public&#39; def ALIYUN_JCENTER_URL = &#39;http://maven.aliyun.com/nexus/content/repositories/jcenter&#39; all { ArtifactRepository repo -&amp;gt; if(repo instanceof MavenArtifactRepository){ def url = repo.url.toString() if (url.startsWith(&#39;https://repo1.maven.org/maven2&#39;)) { project.logger.lifecycle &amp;quot;Repository ${repo.url} replaced by $ALIYUN_REPOSITORY_URL.&amp;quot; remove repo } if (url.startsWith(&#39;https://jcenter.bintray.com/&#39;)) { project.logger.lifecycle &amp;quot;Repository ${repo.url} replaced by $ALIYUN_JCENTER_URL.&amp;quot; remove repo } } } maven { url ALIYUN_REPOSITORY_URL url ALIYUN_JCENTER_URL } } }   Gradle  在Spring boot项目中执行命令gradlew build时，会下载相关版本的gradle文件，但是往往会因为网络问题无法下载。我们需要做的是，将gradle*.</description>
+    </item>
     
     <item>
       <title>微服务要素</title>
